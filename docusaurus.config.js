@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -23,7 +23,7 @@ const config = {
   organizationName: 'IoTResearchLab', // Usually your GitHub org/user name.
   projectName: 'IoTResearchLab.github.io', // Usually your repo name.
   trailingSlash: false,
-  deploymentBranch:'gh-pages',
+  deploymentBranch: 'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -44,15 +44,13 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -73,59 +71,44 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-      
-          {to: '/People', label: 'People', position: 'left'},
-          
-          {to: '/Research', label: 'Research', position: 'left'},
-          {to: '/Publications', label: 'Publications', position: 'left'},
-          {to: '/join-us', label: 'Join us', position: 'right'},
-         
+          { to: '/People', label: 'People', position: 'left' },
+          { to: '/Research', label: 'Research', position: 'left' },
+          { to: '/Publications', label: 'Publications', position: 'left' },
+          { to: '/join-us', label: 'Join us', position: 'right' },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
-            title: 'Docs',
+            title: 'Connect with us',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Github',
+                to: 'https://github.com/IoTResearchLab',
+                logo: {
+                  alt: 'Github',
+                  src: 'img/th.ico',
+                  href: 'https://github.com/IoTResearchLab',
+                  width: 160,
+                  height: 51,
+                },
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Linkedin',
+                to: 'https://www.linkedin.com/company/iot-research-lab/',
+                logo: {
+                  alt: 'LinkedIn',
+                  src: 'img/th(1).png',
+                  href: 'https://www.linkedin.com/company/iot-research-lab/',
+                  width: 160,
+                  height: 51,
+                },
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} IOT Research Lab, Ontario Tech University`,
       },
       prism: {
         theme: prismThemes.github,
