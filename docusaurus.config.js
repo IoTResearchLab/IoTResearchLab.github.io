@@ -9,7 +9,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'IoT Research Lab',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'We make the future',
   favicon: 'img/image.svg',
 
   // Set the production url of your site here
