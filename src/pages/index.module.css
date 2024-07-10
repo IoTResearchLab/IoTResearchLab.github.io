@@ -23,7 +23,7 @@
 }
 .heroBanner {
   position: relative;
-  background-image: url(); /* Path to your image */
+  background-image: url(/static/img/bg.webp); /* Path to your image */
   background-size: cover;
   background-position: center;
   color: rgb(255, 254, 254);
