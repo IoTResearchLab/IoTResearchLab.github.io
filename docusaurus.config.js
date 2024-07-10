@@ -10,7 +10,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'IoT Research Lab',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/logo.ico',
+  favicon: 'img/image.svg',
 
   // Set the production url of your site here
   url: 'https://sensorsconnect.github.io/',
@@ -41,7 +41,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -53,7 +53,7 @@ const config = {
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -63,12 +63,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/logo.svg',
+      image: 'img/image.svg',
       navbar: {
         title: 'Home',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/image.svg',
         },
         items: [
           { to: '/People', label: 'People', position: 'left' },
@@ -85,22 +85,20 @@ const config = {
             items: [
               {
                 label: 'Github',
-                to: 'https://github.com/IoTResearchLab',
+                href: 'https://github.com/IoTResearchLab',
                 logo: {
                   alt: 'Github',
                   src: 'img/th.ico',
-                  href: 'https://github.com/IoTResearchLab',
                   width: 160,
                   height: 51,
                 },
               },
               {
                 label: 'Linkedin',
-                to: 'https://www.linkedin.com/company/iot-research-lab/',
+                href: 'https://www.linkedin.com/company/iot-research-lab/',
                 logo: {
                   alt: 'LinkedIn',
                   src: 'img/th(1).png',
-                  href: 'https://www.linkedin.com/company/iot-research-lab/',
                   width: 160,
                   height: 51,
                 },
@@ -115,6 +113,7 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
 };
 
 export default config;
