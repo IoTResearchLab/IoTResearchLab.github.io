@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
@@ -21,6 +22,7 @@ Healthcare is shifting towards preventive care, but heart care management is ove
         Addresses the challenges of maintaining user privacy amidst the proliferation of interconnected devices, emphasizing strategies and technologies to secure personal data and communications in IoT environments.
       </>
     ),
+    href: "docs/intro",
   },
   {
     title: <a href="docs/intro">IoT Infrastructure and Applications</a>,
