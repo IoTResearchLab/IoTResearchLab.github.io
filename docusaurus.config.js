@@ -115,7 +115,10 @@ const config = {
       },
     }),
     customFields:{
-      healthTitle:"health"
+      healthTitle:"IOT in Health Care",
+      infraTitle:"IOT Infrastructure and Applications",
+      trafficTitle:"IOT Infrastructure and Applications"
+      
     }
 };
 

@@ -9,11 +9,13 @@ import styles from './traffic.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const {customFields}= siteConfig;
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
+          {customFields.trafficTitle}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
       
