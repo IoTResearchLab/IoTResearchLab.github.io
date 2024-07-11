@@ -12,6 +12,7 @@ const config = {
   tagline: 'We make the future',
   favicon: 'img/image.svg',
 
+
   // Set the production url of your site here
   url: 'https://sensorsconnect.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -72,7 +73,7 @@ const config = {
         },
         items: [
           { to: '/People', label: 'People', position: 'left' },
-          { to: '/Research', label: 'Research', position: 'left' },
+          { to: '/health', label: 'Research', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
           { to: '/join-us', label: 'Join us', position: 'right' },
         ],
@@ -113,7 +114,9 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-
+    customFields:{
+      healthTitle:"health"
+    }
 };
 
 export default config;

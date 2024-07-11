@@ -54,7 +54,7 @@ function Feature({ Svg, imgSrc, title, description }) {
 }
 
 
-export default function HomepageFeatures() {
+export default function healthpage() {
   return (
     <section className={styles.features}>
       <div className="container">
