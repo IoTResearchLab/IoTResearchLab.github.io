@@ -17,13 +17,7 @@ function HomepageHeader() {
           {customFields.healthTitle}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/join-us">
-            join us
-          </Link>
-        </div>
+  
       </div>
     </header>
   );
