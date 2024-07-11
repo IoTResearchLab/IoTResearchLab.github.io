@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 const FeatureList = [
   {
@@ -16,7 +16,7 @@ Healthcare is shifting towards preventive care, but heart care management is ove
   },
   {
     title: <a href="docs/intro">IoT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
-    imgSrc: '/img/smart-city.webp', // Use relative path here
+    imgSrc: '/img/traffic.webp', // Use relative path here
     description: (
       <>
         Addresses the challenges of maintaining user privacy amidst the proliferation of interconnected devices, emphasizing strategies and technologies to secure personal data and communications in IoT environments.
