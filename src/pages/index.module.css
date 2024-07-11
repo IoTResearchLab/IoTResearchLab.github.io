@@ -1,6 +1,5 @@
-/* Hero Banner */
 .heroBanner {
-  padding: 4rem 0;
+  height: 500px; /* Set a specific height */
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -8,13 +7,12 @@
   background-size: cover;
   background-position: center;
   color: rgb(255, 254, 254);
-  padding: 100px 0;
   z-index: 1; /* Ensure the heroBanner is within the stacking context */
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    height: 300px; /* Adjust height for smaller screens */
   }
 }
 
