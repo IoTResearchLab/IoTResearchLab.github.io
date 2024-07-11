@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
@@ -10,12 +11,12 @@ const FeatureList = [
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        used to get your website up and running quickly. <a href="docs/intro">Docusaurus</a>.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title:<a href="docs/intro">Docusaurus</a>,
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
@@ -23,6 +24,7 @@ const FeatureList = [
         ahead and move your docs into the <code>docs</code> directory.
       </>
     ),
+    href: "docs/intro",
   },
   {
     title: 'Powered by React',
