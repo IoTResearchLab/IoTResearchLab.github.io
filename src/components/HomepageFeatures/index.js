@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="docs/intro">IOT in Health Care</a>,
+    title: <a href="/health">IOT in Health Care</a>,
     imgSrc: '/img/health.webp',
     description: (
       <>
@@ -15,7 +15,7 @@ Healthcare is shifting towards preventive care, but heart care management is ove
     ),
   },
   {
-    title: <a href="docs/intro">IOT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
+    title: <a href="/traffic">IOT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
     imgSrc: '/img/traffic.webp', // Use relative path here
     description: (
       <>
@@ -25,7 +25,7 @@ Healthcare is shifting towards preventive care, but heart care management is ove
     href: "docs/intro",
   },
   {
-    title: <a href="docs/intro">IOT Infrastructure and Applications</a>,
+    title: <a href="/infra">IOT Infrastructure and Applications</a>,
     imgSrc: '/img/infra.webp',
     description: (
       <>

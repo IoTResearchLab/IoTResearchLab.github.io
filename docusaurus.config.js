@@ -73,7 +73,7 @@ const config = {
         },
         items: [
           { to: '/People', label: 'People', position: 'left' },
-          { to: '/health', label: 'Research', position: 'left' },
+          { to: '/research', label: 'Research', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
           { to: '/join-us', label: 'Join us', position: 'right' },
         ],
