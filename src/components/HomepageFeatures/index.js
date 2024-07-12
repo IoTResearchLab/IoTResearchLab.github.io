@@ -69,7 +69,7 @@ export default function HomepageFeatures() {
           <a href="/research" className={styles.customButton}> More Research Projects</a>
         </div>
         <div className={styles.newSection}>
-          <h1 className={styles.sectionTitle}>Our University</h1>
+          <h1 className={styles.text2}>Our University</h1>
           <div className={styles.buildingSection}>
             <div className={styles.left}>
               <img src={useBaseUrl('/img/building.jpeg')} alt="Building" className={styles.buildingImage} />
@@ -77,6 +77,9 @@ export default function HomepageFeatures() {
             <div className={styles.right}>
               <img src={useBaseUrl('/img/ontariotech.png')} alt="Ontario Tech University" className={styles.logo} />
             </div>
+          </div>
+          <div style={{ textAlign: 'center', marginTop: '20px' }}>
+            <a href="https://ontariotechu.ca/" className={styles.customButton2}>About Ontario Tech Univesrity</a>
           </div>
         </div>
       </div>
