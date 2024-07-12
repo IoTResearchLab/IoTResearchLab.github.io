@@ -34,15 +34,49 @@
   border-radius: 30px; /* High border-radius for oval shape */
   cursor: pointer;
   display: inline-block; /* Make it inline-block to not take the full width */
-  margin: 40px auto; /* Center the button horizontally */
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  text-decoration: none;
 }
 
 .customButton:hover {
-  background-color: #ffffff;
+  background-color: #003366;
   transform: translateY(-2px); /* Slight lift on hover */
 }
 
+.newSection {
+  margin-top: 40px;
+}
 
+.sectionTitle {
+  text-align: center;
+  padding: 5rem 0;
+  color: #00427c;
+}
+
+.buildingSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+  text-align: center;
+}
+
+.buildingImage {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}

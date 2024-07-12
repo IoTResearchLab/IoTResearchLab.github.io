@@ -68,6 +68,17 @@ export default function HomepageFeatures() {
         <div style={{ clear: 'both', width: '100%', textAlign: 'center', marginTop: '40px' }}>
           <a href="/research" className={styles.customButton}> More Research Projects</a>
         </div>
+        <div className={styles.newSection}>
+          <h1 className={styles.sectionTitle}>Our University</h1>
+          <div className={styles.buildingSection}>
+            <div className={styles.left}>
+              <img src={useBaseUrl('/img/building.jpeg')} alt="Building" className={styles.buildingImage} />
+            </div>
+            <div className={styles.right}>
+              <img src={useBaseUrl('/img/ontariotech.png')} alt="Ontario Tech University" className={styles.logo} />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
