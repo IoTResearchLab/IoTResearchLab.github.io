@@ -79,7 +79,7 @@ export default function HomepageFeatures() {
             </div>
           </div>
           <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <a href="https://ontariotechu.ca/" className={styles.customButton2}>About Ontario Tech Univesrity</a>
+            <a href="https://ontariotechu.ca/" className={styles.customButton2}>About Ontario Tech University</a>
           </div>
         </div>
       </div>
