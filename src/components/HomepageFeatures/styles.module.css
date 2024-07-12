@@ -9,3 +9,106 @@
   height: 200px;
   width: 200px;
 }
+.text {
+  text-align: center;
+  padding: 2rem 0;
+  color: #00427c;
+ 
+}
+.text2 {
+  text-align: center;
+  padding: 2rem 0;
+  color: #00427c;
+  margin: 60px;
+}
+
+
+/* styles.module.css */
+/* styles.module.css */
+.featureImg {
+  padding: 2rem 0;
+  width: 350px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  border-radius: 50% / 100%; /* Create a horizontal oval */
+  object-fit: cover; /* Ensure the image covers the container */
+}
+
+.customButton {
+  background-color: #00427c;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.customButton:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.newSection {
+  margin-top: 40px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.buildingSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  text-align: center;
+}
+
+.right {
+  flex: 1;
+  text-align: center;
+}
+
+.buildingImage {
+  width: 100%;
+  height: auto;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.customButton2 {
+  background-color: #00427c;
+  color: white;
+  font-size: 1.2em; /* Smaller font size */
+  padding: 12px 40px; /* Adjusted padding */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  margin: 50px 0; /* Adding white space above and below */
+}
+
+.customButton2:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}

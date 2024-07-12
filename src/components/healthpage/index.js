@@ -6,7 +6,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="/health">IOT in Health Care</a>,
+    title: 'IOT in Health Care',
+    link: '/health', // Update this path
     imgSrc: '/img/health.webp',
     description: (
       <>
@@ -15,17 +16,18 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/traffic">IOT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
-    imgSrc: '/img/traffic.webp', // Use relative path here
+    title: 'IoT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions',
+    link: '/traffic', // Update this path
+    imgSrc: '/img/smart-city.webp', // Use relative path here
     description: (
       <>
         Addresses the challenges of maintaining user privacy amidst the proliferation of interconnected devices, emphasizing strategies and technologies to secure personal data and communications in IoT environments.
       </>
     ),
-    href: "docs/intro",
   },
   {
-    title: <a href="/infra">IOT Infrastructure and Applications</a>,
+    title: 'IoT Infrastructure and Applications',
+    link: '/infra', // Update this path
     imgSrc: '/img/infra.webp',
     description: (
       <>
@@ -35,8 +37,9 @@ const FeatureList = [
   },
 ];
 
-function Feature({ Svg, imgSrc, title, description }) {
+function Feature({ Svg, imgSrc, title, description, link }) {
   const resolvedImgSrc = useBaseUrl(imgSrc);
+  const resolvedLink = useBaseUrl(link);
 
   return (
     <div className={clsx('col col--4')}>
@@ -48,14 +51,16 @@ function Feature({ Svg, imgSrc, title, description }) {
         ) : null}
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h3">
+          <a href={resolvedLink}>{title}</a>
+        </Heading>
         <p>{description}</p>
       </div>
     </div>
   );
 }
 
-export default function HomepageFeatures() {
+export default function HealthPage() {
   return (
     <section className={styles.features}>
       <div className="container">
@@ -64,23 +69,6 @@ export default function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
-        </div>
-        <div style={{ clear: 'both', width: '100%', textAlign: 'center', marginTop: '40px' }}>
-          <a href="/research" className={styles.customButton}> More Research Projects</a>
-        </div>
-        <div className={styles.newSection}>
-          <h1 className={styles.text2}>Our University</h1>
-          <div className={styles.buildingSection}>
-            <div className={styles.left}>
-              <img src={useBaseUrl('/img/building.jpeg')} alt="Building" className={styles.buildingImage} />
-            </div>
-            <div className={styles.right}>
-              <img src={useBaseUrl('/img/ontariotech.png')} alt="Ontario Tech University" className={styles.logo} />
-            </div>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <a href="https://ontariotechu.ca/" className={styles.customButton2}>About Ontario Tech University</a>
-          </div>
         </div>
       </div>
     </section>

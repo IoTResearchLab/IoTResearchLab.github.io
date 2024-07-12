@@ -6,26 +6,24 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="/health">IOT in Health Care</a>,
+    title: <a href="docs/intro">IOT in Health Care</a>,
     imgSrc: '/img/health.webp',
     description: (
       <>
-        Healthcare is shifting towards preventive care, but heart care management is overlooked by both wellness and MedTech companies. With widespread digital connectivity, there's a significant opportunity for connected health devices and remote patient monitoring to fill this gap. This can enhance heart care management and integrate it into the broader preventive care landscape.
-      </>
+Healthcare is shifting towards preventive care, but heart care management is overlooked by both wellness and MedTech companies. With widespread digital connectivity, there's a significant opportunity for connected health devices and remote patient monitoring to fill this gap. This can enhance heart care management and integrate it into the broader preventive care landscape.      </>
     ),
   },
   {
-    title: <a href="/traffic">IOT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
-    imgSrc: '/img/traffic.webp', // Use relative path here
+    title: <a href="docs/intro">IoT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
+    imgSrc: '/img/smart-city.webp', // Use relative path here
     description: (
       <>
         Addresses the challenges of maintaining user privacy amidst the proliferation of interconnected devices, emphasizing strategies and technologies to secure personal data and communications in IoT environments.
       </>
     ),
-    href: "docs/intro",
   },
   {
-    title: <a href="/infra">IOT Infrastructure and Applications</a>,
+    title: <a href="docs/intro">IoT Infrastructure and Applications</a>,
     imgSrc: '/img/infra.webp',
     description: (
       <>
@@ -55,6 +53,7 @@ function Feature({ Svg, imgSrc, title, description }) {
   );
 }
 
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
@@ -64,23 +63,6 @@ export default function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
-        </div>
-        <div style={{ clear: 'both', width: '100%', textAlign: 'center', marginTop: '40px' }}>
-          <a href="/research" className={styles.customButton}> More Research Projects</a>
-        </div>
-        <div className={styles.newSection}>
-          <h1 className={styles.text2}>Our University</h1>
-          <div className={styles.buildingSection}>
-            <div className={styles.left}>
-              <img src={useBaseUrl('/img/building.jpeg')} alt="Building" className={styles.buildingImage} />
-            </div>
-            <div className={styles.right}>
-              <img src={useBaseUrl('/img/ontariotech.png')} alt="Ontario Tech University" className={styles.logo} />
-            </div>
-          </div>
-          <div style={{ textAlign: 'center', marginTop: '20px' }}>
-            <a href="https://ontariotechu.ca/" className={styles.customButton2}>About Ontario Tech University</a>
-          </div>
         </div>
       </div>
     </section>
