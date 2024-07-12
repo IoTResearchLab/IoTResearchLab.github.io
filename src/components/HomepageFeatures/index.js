@@ -4,14 +4,14 @@ import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-
 const FeatureList = [
   {
     title: <a href="/health">IOT in Health Care</a>,
     imgSrc: '/img/health.webp',
     description: (
       <>
-Healthcare is shifting towards preventive care, but heart care management is overlooked by both wellness and MedTech companies. With widespread digital connectivity, there's a significant opportunity for connected health devices and remote patient monitoring to fill this gap. This can enhance heart care management and integrate it into the broader preventive care landscape.      </>
+        Healthcare is shifting towards preventive care, but heart care management is overlooked by both wellness and MedTech companies. With widespread digital connectivity, there's a significant opportunity for connected health devices and remote patient monitoring to fill this gap. This can enhance heart care management and integrate it into the broader preventive care landscape.
+      </>
     ),
   },
   {
@@ -55,7 +55,6 @@ function Feature({ Svg, imgSrc, title, description }) {
   );
 }
 
-
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
@@ -65,6 +64,9 @@ export default function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+        <div style={{ clear: 'both', width: '100%', textAlign: 'center', marginTop: '40px' }}>
+          <a href="/research" className={styles.customButton}> More Research Projects</a>
         </div>
       </div>
     </section>

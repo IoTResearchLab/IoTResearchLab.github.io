@@ -25,3 +25,24 @@
   object-fit: cover; /* Ensure the image covers the container */
 }
 
+.customButton {
+  background-color: #00427c;
+  color: white;
+  font-size: 1.5em;
+  padding: 15px 50px; /* Increased horizontal padding */
+  border: none;
+  border-radius: 30px; /* High border-radius for oval shape */
+  cursor: pointer;
+  display: inline-block; /* Make it inline-block to not take the full width */
+  margin: 40px auto; /* Center the button horizontally */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.customButton:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+
