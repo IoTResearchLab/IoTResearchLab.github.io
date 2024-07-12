@@ -1,0 +1,17 @@
+.team-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .text2 {
+    text-align: center;
+    padding: 2rem 0;
+    color: #00427c;
+  }
+ 

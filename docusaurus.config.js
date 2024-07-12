@@ -8,7 +8,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IoT Research Lab',
+  title: 'IOT Research Lab',
   tagline: 'We make the future',
   favicon: 'img/image.svg',
 
@@ -72,7 +72,7 @@ const config = {
           src: 'img/image.svg',
         },
         items: [
-          { to: '/People', label: 'People', position: 'left' },
+          { to: '/team', label: 'Our Team', position: 'left' },
           { to: '/Research', label: 'Research', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
           { to: '/join-us', label: 'Join us', position: 'right' },
@@ -107,7 +107,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} IOT Research Lab, Ontario Tech University`,
+        copyright: `Copyright © ${new Date().getFullYear()} IOT Research Lab @Ontario Tech University`,
       },
       prism: {
         theme: prismThemes.github,
