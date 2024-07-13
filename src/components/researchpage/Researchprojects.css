@@ -1,0 +1,49 @@
+/* src/components/ResearchProjects.css */
+.research-projects {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 200px; /* Adjust the size as needed */
+    height: auto; /* Ensure the height adjusts automatically to maintain aspect ratio */
+    margin: 20px auto;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left for better readability */
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+  }
+  
+  .project-card p {
+    margin-bottom: 0;
+  }
+  
+  .text {
+    text-align: center;
+    padding: 2rem 0;
+    color: #00427c;
+  }
+  
