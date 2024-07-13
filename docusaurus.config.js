@@ -10,7 +10,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'IOT Research Lab',
   tagline: 'We make the future',
-  favicon: 'img/image.svg',
+  favicon: 'img/logo.svg',
 
 
   // Set the production url of your site here
@@ -64,12 +64,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/image.svg',
+      image: 'img/logo.svg',
       navbar: {
         title: 'Home',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/image.svg',
+          src: 'img/logo.svg',
         },
         items: [
           { to: '/team', label: 'Our Team', position: 'left' },
