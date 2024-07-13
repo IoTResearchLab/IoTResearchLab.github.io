@@ -39,7 +39,7 @@
 
 .team-member img {
   width: 250px; /* Set the desired width for the images */
-  height: 250px;
+  height: auto;
   border-radius: 50%;
   margin-bottom: 10px; /* Add some space below the image */
 }
