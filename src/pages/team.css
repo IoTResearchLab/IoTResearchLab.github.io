@@ -35,6 +35,8 @@
   margin: 10px;
   box-sizing: border-box;
   text-align: center;
+  color: #00427c; /* Change the text color */
+
 }
 
 .team-member img {

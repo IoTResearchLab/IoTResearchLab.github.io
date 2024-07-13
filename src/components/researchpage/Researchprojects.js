@@ -19,20 +19,23 @@ import project13 from './project13.png';
 import project14 from './project14.gif';
 
 const projects = [
+  { title: 'Road Detection Improvements Of Autnomos Vechiles', description: 'Description for project eleven.', image: project11 },
+  { title: 'Phone Of Things', description: 'Description for project thirteen.', image: project13 },
+  { title: 'Smart Intesictions, Making Our Roads Safer ', description: 'Description for project eight.', image: project8 },
+
+  { title: 'Real-Time Traffic Analytics From live Camera Feeds ', description: 'Description for project ten.', image: project10 },
+  { title: 'Violent and Suspicious Events Detection System', description: 'Description for project fourteen.', image: project14 },
+
+  { title: 'Protecting User Privacy in the Connected world', description: 'Description for project two.', image: project2 },
   { title: '[ARC] Building IOT infrastructure', description: 'Description for project one.', image: project1 },
-  { title: 'Project Two', description: 'Description for project two.', image: project2 },
-  { title: 'Project Three', description: 'Description for project three.', image: project3 },
-  { title: 'Project Four', description: 'Description for project four.', image: project4 },
-  { title: 'Project Five', description: 'Description for project five.', image: project5 },
-  { title: 'Project Six', description: 'Description for project six.', image: project6 },
-  { title: 'Project Seven', description: 'Description for project seven.', image: project7 },
-  { title: 'Project Eight', description: 'Description for project eight.', image: project8 },
-  { title: 'Project Nine', description: 'Description for project nine.', image: project9 },
-  { title: 'Project Ten', description: 'Description for project ten.', image: project10 },
-  { title: 'Project Eleven', description: 'Description for project eleven.', image: project11 },
-  { title: 'Project Twelve', description: 'Description for project twelve.', image: project12 },
-  { title: 'Project Thirteen', description: 'Description for project thirteen.', image: project13 },
-  { title: 'Project Fourteen', description: 'Description for project fourteen.', image: project14 },
+
+  { title: '[ARC] Dynamic Access Control in IOT Scenarios', description: 'Description for project three.', image: project3 },
+  { title: 'On-Demand Sensing For Smart City Services', description: 'Description for project four.', image: project4 },
+  { title: 'XBeats,A Smart ECG Monitoring Platform', description: 'Description for project five.', image: project5 },
+  { title: 'Farming Like Never: Yield Estimation and Visualization for Precision Agriculture', description: 'Description for project six.', image: project6 },
+  { title: 'Smart Roads and Traffic Prediction', description: 'Description for project seven.', image: project7 },
+  { title: 'Responding to Agitation/Agression in Dementia', description: 'Description for project nine.', image: project9 },
+  { title: 'RegTraffic: A Regression based Traffic Simulator ', description: 'Description for project twelve.', image: project12 },
   // Add more projects as needed
 ];
 
