@@ -75,7 +75,7 @@ const config = {
           { to: '/team', label: 'Our Team', position: 'left' },
           { to: '/Research', label: 'Research', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
-          { to: '/join-us', label: 'Join us', position: 'right' },
+          { to: '/join-us', label: 'Contact Us', position: 'right' },
         ],
       },
       footer: {
