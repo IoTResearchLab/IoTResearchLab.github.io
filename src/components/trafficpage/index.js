@@ -5,7 +5,51 @@ import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
-
+  {
+    title: <a href="/traffic">Road Detection Improvements Of Autnomos Vechiles</a>,
+    imgSrc: '/img/project11.gif', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
+  },
+  {
+    title: <a href="/traffic">Smart Intersictions, Making Our Roads Safer</a>,
+    imgSrc: '/img/project8.jpeg', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
+  },
+  {
+    title: <a href="/traffic">Real-Time Traffic Analytics From live Camera Feeds</a>,
+    imgSrc: '/img/project10.gif', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
+  },
+  {
+    title: <a href="/traffic">Smart Roads and Traffic Prediction</a>,
+    imgSrc: '/img/project7.jpeg', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
+  },
+  {
+    title: <a href="/traffic">RegTraffic: A Regression based Traffic Simulator</a>,
+    imgSrc: '/img/project12.png', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
+  },
 ];
 
 function Feature({ Svg, imgSrc, title, description }) {
