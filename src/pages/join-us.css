@@ -1,0 +1,58 @@
+/* JoinUsForm.css */
+
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #00427c;
+    --input-border-color: #00427c;
+    --button-background-color: #00427c;
+    --button-hover-background-color: #003366;
+    --button-text-color: white;
+  }
+  
+  [data-theme="dark"] {
+    --background-color: #2c2c2c;
+    --text-color: #cfcfcf;
+    --input-border-color: #555;
+    --button-background-color: #555;
+    --button-hover-background-color: #444;
+    --button-text-color: #cfcfcf;
+  }
+  
+  .join-us-form {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+  }
+  
+  .submit-btn {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--button-hover-background-color);
+  }
+  
