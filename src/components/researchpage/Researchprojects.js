@@ -21,7 +21,7 @@ import project14 from './project14.gif';
 const projects = [
   { title: 'Road Detection Improvements Of Autnomos Vechiles', description: 'Description for project eleven.', image: project11 },
   { title: 'Phone Of Things', description: 'Description for project thirteen.', image: project13 },
-  { title: 'Smart Intesictions, Making Our Roads Safer ', description: 'Description for project eight.', image: project8 },
+  { title: 'Smart Intersictions, Making Our Roads Safer ', description: 'Description for project eight.', image: project8 },
 
   { title: 'Real-Time Traffic Analytics From live Camera Feeds ', description: 'Description for project ten.', image: project10 },
   { title: 'Violent and Suspicious Events Detection System', description: 'Description for project fourteen.', image: project14 },
