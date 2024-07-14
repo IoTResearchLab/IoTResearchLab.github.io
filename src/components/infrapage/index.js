@@ -5,6 +5,62 @@ import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
+  {
+    title: <a href="/infra">Phone Of Things</a>,
+    imgSrc: '/img/project13.png',
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    title: <a href="/infra">Violent and Suspicious Events Detection System</a>,
+    imgSrc: '/img/project14.gif',
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    title: <a href="/infra">Protecting User Privacy in the Connected world</a>,
+    imgSrc: '/img/project2.jpeg',
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    title: <a href="/infra">[ARC] Building IOT infrastructure</a>,
+    imgSrc: '/img/project1.png',
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    title: <a href="/infra">[ARC] Dynamic Access Control in IOT Scenarios</a>,
+    imgSrc: '/img/project3.jpeg',
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    title: <a href="/infra">On-Demand Sensing For Smart City Services</a>,
+    imgSrc: '/img/project4.jpeg',
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    title: <a href="/infra">Farming Like Never: Yield Estimation and Visualization for Precision Agriculture</a>,
+    imgSrc: '/img/project6.gif',
+    description: (
+      <>
+      </>
+    ),
+  },
   
 ];
 

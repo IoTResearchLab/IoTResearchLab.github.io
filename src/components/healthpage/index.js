@@ -5,6 +5,22 @@ import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
+  {
+    title: <a href="/health">XBeats,A Smart ECG Monitoring Platform</a>,
+    imgSrc: '/img/project5.gif',
+    description: (
+      <>
+      </>
+    ),
+  },
+  {
+    title: <a href="/health">Responding to Agitation/Agression in Dementia</a>,
+    imgSrc: '/img/project9.jpeg',
+    description: (
+      <>
+      </>
+    ),
+  },
   
 ];
 

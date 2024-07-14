@@ -14,7 +14,6 @@ const FeatureList = [
         Addresses the challenges of maintaining user privacy amidst the proliferation of interconnected devices, emphasizing strategies and technologies to secure personal data and communications in IoT environments.
       </>
     ),
-    href: "docs/intro",
   },
   {
     title: <a href="/health">IOT in Health Care</a>,
