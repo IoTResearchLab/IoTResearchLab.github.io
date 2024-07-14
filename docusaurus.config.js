@@ -117,7 +117,8 @@ const config = {
     customFields:{
       healthTitle:"IOT in Health Care",
       infraTitle:"IOT Infrastructure and Applications",
-      trafficTitle:"IOT Infrastructure and Applications"
+      trafficTitle:"IOT in Traffic Management",
+
       
     }
 };
