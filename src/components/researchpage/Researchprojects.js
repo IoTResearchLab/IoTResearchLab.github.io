@@ -1,5 +1,5 @@
 import React from 'react';
-import './ResearchProjects.css';
+import './Researchprojects.css';
 import logo from './our-projects-logo.png'; // Ensure this path is correct
 
 // Import image paths for each project
