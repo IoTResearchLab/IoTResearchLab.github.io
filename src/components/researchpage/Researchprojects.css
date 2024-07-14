@@ -1,0 +1,51 @@
+.research-projects {
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Make the container take the full width of the page */
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 300px; /* Adjust the size as needed */
+  height: auto; /* Ensure the height adjusts automatically to maintain aspect ratio */
+  margin: 20px auto;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the items in the container */
+  margin: 0 -10px; /* Adjust container margin to counteract card margins */
+}
+
+.project-card {
+  border: 1px solid #00427c;
+  padding: 20px;
+  flex: 1 1 45%; /* Flex-grow, flex-shrink, and flex-basis */
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: center; /* Center the text */
+  color: #00427c; /* Change the text color */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Set a maximum height for larger images */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card p {
+  margin-bottom: 0;
+}
+
+.text {
+  text-align: center;
+  padding: 2rem 0;
+  color: #00427c;
+}

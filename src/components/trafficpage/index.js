@@ -6,30 +6,49 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="docs/intro">IOT in Health Care</a>,
-    imgSrc: '/img/health.webp',
+    title: <a href="/traffic">Road Detection Improvements Of Autnomos Vechiles</a>,
+    imgSrc: '/img/project11.gif', // Use relative path here
     description: (
       <>
-Healthcare is shifting towards preventive care, but heart care management is overlooked by both wellness and MedTech companies. With widespread digital connectivity, there's a significant opportunity for connected health devices and remote patient monitoring to fill this gap. This can enhance heart care management and integrate it into the broader preventive care landscape.      </>
-    ),
-  },
-  {
-    title: <a href="docs/intro">IoT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
-    imgSrc: '/img/smart-city.webp', // Use relative path here
-    description: (
-      <>
-        Addresses the challenges of maintaining user privacy amidst the proliferation of interconnected devices, emphasizing strategies and technologies to secure personal data and communications in IoT environments.
       </>
     ),
+    href: "docs/intro",
   },
   {
-    title: <a href="docs/intro">IoT Infrastructure and Applications</a>,
-    imgSrc: '/img/infra.webp',
+    title: <a href="/traffic">Smart Intersictions, Making Our Roads Safer</a>,
+    imgSrc: '/img/project8.jpeg', // Use relative path here
     description: (
       <>
-        Involves creating foundational networks and frameworks to support interconnected IoT devices and applications, ensuring reliable connectivity and efficient data management across various domains like smart cities, healthcare, and agriculture.
       </>
     ),
+    href: "docs/intro",
+  },
+  {
+    title: <a href="/traffic">Real-Time Traffic Analytics From live Camera Feeds</a>,
+    imgSrc: '/img/project10.gif', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
+  },
+  {
+    title: <a href="/traffic">Smart Roads and Traffic Prediction</a>,
+    imgSrc: '/img/project7.jpeg', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
+  },
+  {
+    title: <a href="/traffic">RegTraffic: A Regression based Traffic Simulator</a>,
+    imgSrc: '/img/project12.png', // Use relative path here
+    description: (
+      <>
+      </>
+    ),
+    href: "docs/intro",
   },
 ];
 
@@ -58,7 +77,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <h1 className={styles.text}>Research Fields</h1>
+        <h1 className={styles.text}>Field Projects</h1>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

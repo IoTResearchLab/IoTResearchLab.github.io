@@ -8,9 +8,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IoT Research Lab',
+  title: 'IOT Research Lab',
   tagline: 'We make the future',
-  favicon: 'img/image.svg',
+  favicon: 'img/logo.svg',
 
 
   // Set the production url of your site here
@@ -64,18 +64,18 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/image.svg',
+      image: 'img/logo.svg',
       navbar: {
         title: 'Home',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/image.svg',
+          src: 'img/logo.svg',
         },
         items: [
-          { to: '/People', label: 'People', position: 'left' },
+          { to: '/team', label: 'Our Team', position: 'left' },
           { to: '/Research', label: 'Research', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
-          { to: '/join-us', label: 'Join us', position: 'right' },
+          { to: '/join-us', label: 'Contact Us', position: 'right' },
         ],
       },
       footer: {
@@ -107,7 +107,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} IOT Research Lab, Ontario Tech University`,
+        copyright: `Copyright © ${new Date().getFullYear()} IOT Research Lab @Ontario Tech University`,
       },
       prism: {
         theme: prismThemes.github,
@@ -117,7 +117,8 @@ const config = {
     customFields:{
       healthTitle:"IOT in Health Care",
       infraTitle:"IOT Infrastructure and Applications",
-      trafficTitle:"IOT Infrastructure and Applications"
+      trafficTitle:"IOT in Traffic Management",
+
       
     }
 };
