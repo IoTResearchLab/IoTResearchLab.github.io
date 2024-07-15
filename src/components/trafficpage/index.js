@@ -6,13 +6,13 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="/traffic">Road Detection Improvements Of Autnomos Vechiles</a>,
+    title: <a href="/project11">Road Detection Improvements Of Autnomos Vechiles</a>,
     imgSrc: '/img/project11.gif', // Use relative path here
     description: (
       <>
       </>
     ),
-    href: "docs/intro",
+    
   },
   {
     title: <a href="/traffic">Smart Intersictions, Making Our Roads Safer</a>,
@@ -21,16 +21,14 @@ const FeatureList = [
       <>
       </>
     ),
-    href: "docs/intro",
   },
   {
-    title: <a href="/traffic">Real-Time Traffic Analytics From live Camera Feeds</a>,
+    title: <a href="/project10">Real-Time Traffic Analytics From live Camera Feeds</a>,
     imgSrc: '/img/project10.gif', // Use relative path here
     description: (
       <>
       </>
     ),
-    href: "docs/intro",
   },
   {
     title: <a href="/traffic">Smart Roads and Traffic Prediction</a>,
@@ -39,7 +37,6 @@ const FeatureList = [
       <>
       </>
     ),
-    href: "docs/intro",
   },
   {
     title: <a href="/traffic">RegTraffic: A Regression based Traffic Simulator</a>,
@@ -48,7 +45,6 @@ const FeatureList = [
       <>
       </>
     ),
-    href: "docs/intro",
   },
 ];
 
