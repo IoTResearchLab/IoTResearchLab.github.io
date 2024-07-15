@@ -31,7 +31,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/traffic">Smart Roads and Traffic Prediction</a>,
+    title: <a href="/project7">Smart Roads and Traffic Prediction</a>,
     imgSrc: '/img/project7.jpeg', // Use relative path here
     description: (
       <>
