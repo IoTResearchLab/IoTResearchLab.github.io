@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 const FeatureList = [
   
   {
-    title: <a href="/traffic">IOT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
+    title: <a href="/traffic">IoT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
     imgSrc: '/img/traffic.webp', // Use relative path here
     description: (
       <>
@@ -16,7 +16,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/health">IOT in Health Care</a>,
+    title: <a href="/health">IoT in Health Care</a>,
     imgSrc: '/img/health.webp',
     description: (
       <>
@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/infra">IOT Infrastructure and Applications</a>,
+    title: <a href="/infra">IoT Infrastructure and Applications</a>,
     imgSrc: '/img/infra.webp',
     description: (
       <>

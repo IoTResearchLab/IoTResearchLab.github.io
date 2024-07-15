@@ -27,9 +27,9 @@ const projects = [
   { title: 'Violent and Suspicious Events Detection System', description: 'Description for project fourteen.', image: project14 },
 
   { title: 'Protecting User Privacy in the Connected world', description: 'Description for project two.', image: project2 },
-  { title: '[ARC] Building IOT infrastructure', description: 'Description for project one.', image: project1 },
+  { title: '[ARC] Building IoT infrastructure', description: 'Description for project one.', image: project1 },
 
-  { title: '[ARC] Dynamic Access Control in IOT Scenarios', description: 'Description for project three.', image: project3 },
+  { title: '[ARC] Dynamic Access Control in IoT Scenarios', description: 'Description for project three.', image: project3 },
   { title: 'On-Demand Sensing For Smart City Services', description: 'Description for project four.', image: project4 },
   { title: 'XBeats,A Smart ECG Monitoring Platform', description: 'Description for project five.', image: project5 },
   { title: 'Farming Like Never: Yield Estimation and Visualization for Precision Agriculture', description: 'Description for project six.', image: project6 },

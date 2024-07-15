@@ -8,7 +8,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IOT Research Lab',
+  title: 'IoT Research Lab',
   tagline: 'We make the future',
   favicon: 'img/logo.svg',
 
@@ -76,9 +76,9 @@ const config = {
           { to: '/Publications', label: 'Publications', position: 'left' },
           { to: '/traffic', label: 'Smart Mobillity', position: 'left' },
           { to: '/join-us', label: 'Contact Us', position: 'right' },
-          { to: '/health', label: 'IOT in Health Care', position: 'left' },
+          { to: '/health', label: 'IoT in Health Care', position: 'left' },
         
-          { to: '/infra', label: 'IOT Infrastructure', position: 'left' },
+          { to: '/infra', label: 'IoT Infrastructure', position: 'left' },
         ],
       },
       footer: {
@@ -110,7 +110,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} IOT Research Lab @Ontario Tech University`,
+        copyright: `Copyright © ${new Date().getFullYear()} IoT Research Lab @Ontario Tech University`,
       },
       prism: {
         theme: prismThemes.github,
@@ -118,9 +118,9 @@ const config = {
       },
     }),
     customFields:{
-      healthTitle:"IOT in Health Care",
-      infraTitle:"IOT Infrastructure and Applications",
-      trafficTitle:"IOT in Traffic Management",
+      healthTitle:"IoT in Health Care",
+      infraTitle:"IoT Infrastructure and Applications",
+      trafficTitle:"IoT in Traffic Management",
 
       
     }
