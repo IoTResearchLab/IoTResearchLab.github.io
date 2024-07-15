@@ -73,9 +73,11 @@ const config = {
         },
         items: [
           { to: '/team', label: 'Our Team', position: 'left' },
-          { to: '/Research', label: 'Research', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
           { to: '/join-us', label: 'Contact Us', position: 'right' },
+          { to: '/health', label: 'IOT in Health Care', position: 'left' },
+          { to: '/team', label: 'Smart Mobillity', position: 'left' },
+          { to: '/infra', label: 'IOT Infrastructure', position: 'left' },
         ],
       },
       footer: {
