@@ -3,4 +3,18 @@
     width: 100px;
     margin-left: 10px;
   }
+  /* styles.module.css */
+
+
+
+/* Dark mode styles */
+
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  .text-color {
+    color: #00427c; /* Your existing color */
+  }
+}
+
   
