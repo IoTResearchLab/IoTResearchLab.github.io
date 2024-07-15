@@ -1,0 +1,101 @@
+import React from 'react';
+import styles from './project1.module.css'; // Adjust path as necessary
+
+export const meta = {
+  title: 'Your Project Title',
+  description: 'Description of your project',
+};
+
+
+
+      <div className={styles.text}>
+        <h1>Road Detection Improvement of Autonomous Vehicles in Bad Weather Conditions</h1>
+      </div>
+      <div className={styles.text2}>
+        <h2><em>Our research focuses on applying sensor fusion to improve AVs perception when driving in weather conditions such as rain, fog, etc.</em></h2>
+      </div>
+
+      <br />
+        <br />
+      <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '20px' }}>
+        <div style={{ flex: 6, marginRight: '2rem' }}>
+          <p style={{ fontSize: '1.2rem' }}>Current state-of-the-art techniques for road detection perform well in good weather conditions but suffer in bad weather conditions. The majority of current road detection techniques use camera and lidar sensors. Due to fog, a view of camera lenses gets occluded. A short wavelength of lidar provides a good resolution but the light pulses get absorbed by weather particles. MM-wave radar works well but its comparatively larger wavelength provides a sparse resolution.</p>
+        </div>
+        <div style={{ flex: 6, textAlign: 'right' }}>
+          <img src="/img/project11/p1.png"/>
+        </div>
+      </div>
+
+      <hr style={{ margin: '2rem 0' }} />
+
+      <div className={styles.text}>
+        <h1>Research Gaps</h1>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '20px' }}>
+        <div style={{ flex: 4, textAlign: 'center', margin: '1rem' }}>
+          <div>
+            <img src="/img/project11/p2.png"/>
+          </div>
+          <div className={styles.text3}>
+            <h4>Camera + Lidar</h4>
+            <p>Current camera and lidar sensor fusion-based detection methods work well but suffer in inclement weather.</p>
+          </div>
+        </div>
+        <div style={{ flex: 4, textAlign: 'center', margin: '1rem' }}>
+          <div>
+            <img src="/img/project11/p3.png"/>
+          </div>
+          <div className={styles.text3}>
+            <h4>Pricing</h4>
+            <p>The pricing of lidar is very high, making the production cost of AVs costly.</p>
+          </div>
+        </div>
+        <div style={{ flex: 4, textAlign: 'center', margin: '1rem' }}>
+          <div>
+            <img src="/img/project11/p4.png"/>
+          </div>
+          <div className={styles.text3}>
+            <h4>MM-wave Radar</h4>
+            <p>MM-wave radar works well in inclement weather and is cheaper compared to lidar, but it currently has sparse resolution.</p>
+          </div>
+        </div>
+      </div>
+
+      <hr style={{ margin: '2rem 0' }} />
+
+      <div className={styles.text}>
+        <h1>Proposed Approach</h1>
+      </div>
+      <div className={styles.text3}>
+        <p style={{ fontSize: '1.2rem' }}>We apply camera and MM-wave radar sensor fusion and use techniques such as deep learning for segmentation and detection, sensor pre-processing and filtering, curve fitting, and sliding window search to detect road boundaries and drivable road regions. We have developed a ROS package for camera and MM-wave radar fusion and filtering on radar point cloud to enable the use of MM-wave radar.</p>
+      </div>
+
+      <hr style={{ margin: '2rem 0' }} />
+
+       <div className={styles.text}>
+        <h1>Data collection</h1>
+      </div>
+       <div className={styles.text3}>
+        <p style={{ fontSize: '1.2rem' }}>We collect the sensor data using different vehicles and at different heights and positions to balance the positional bias. We also augment the bad weather conditions in the dataset</p>
+      </div>
+     
+        <div style={{ flex: 6, textAlign: 'center' }}>
+          <img src="/img/project11/p6.png"/>
+        </div>
+
+              <hr style={{ margin: '2rem 0' }} />
+
+
+          <div className={styles.text}>
+        <h1>Results</h1>
+      </div>
+      <br/>
+
+         <div style={{ display: 'flex', alignItems: 'center', paddingBottom: '20px' }}>
+                <div style={{ flex: 6, textAlign: 'center' }}>
+                 <img src="/img/project11/p7.gif"  />
+                </div>
+                <div style={{ flex: 6, textAlign: 'center' }}>
+                 <img src="/img/project11/p8.gif"  />
+                 </div>
+        </div>
