@@ -12,7 +12,6 @@ const config = {
   tagline: 'We make the future',
   favicon: 'img/logo.svg',
 
-
   // Set the production url of your site here
   url: 'https://sensorsconnect.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -74,10 +73,10 @@ const config = {
         items: [
           { to: '/team', label: 'Our Team', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
-          { to: '/traffic', label: 'Smart Mobillity', position: 'left' },
+          { to: '/traffic', label: 'Smart Mobility', position: 'left' },
+          { type: 'search', position: 'right' }, 
           { to: '/join-us', label: 'Contact Us', position: 'right' },
           { to: '/health', label: 'IoT in Health Care', position: 'left' },
-        
           { to: '/infra', label: 'IoT Infrastructure', position: 'left' },
         ],
       },
@@ -98,7 +97,7 @@ const config = {
                 },
               },
               {
-                label: 'Linkedin',
+                label: 'LinkedIn',
                 href: 'https://www.linkedin.com/company/iot-research-lab/',
                 logo: {
                   alt: 'LinkedIn',
@@ -117,13 +116,24 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-    customFields:{
-      healthTitle:"IoT in Health Care",
-      infraTitle:"IoT Infrastructure and Applications",
-      trafficTitle:"IoT in Traffic Management",
-
-      
-    }
+  plugins: [
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        // Options here
+        indexDocs: true,          // Whether to index docs
+        indexBlog: true,          // Whether to index blog posts
+        indexPages: true,         // Whether to index static pages
+        language: "en",           // Language of your documentation
+        // Additional options can be added as needed
+      },
+    ],
+  ],
+  customFields:{
+    healthTitle:"IoT in Health Care",
+    infraTitle:"IoT Infrastructure and Applications",
+    trafficTitle:"IoT in Traffic Management",
+  },
 };
 
 export default config;
