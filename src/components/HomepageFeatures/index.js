@@ -68,6 +68,7 @@ export default function HomepageFeatures() {
         <div style={{ clear: 'both', width: '100%', textAlign: 'center', marginTop: '40px' }}>
           <a href="/research" className={styles.customButton}> More Research Projects</a>
         </div>
+        <hr style={{ margin: '2rem 0' }} />
         <div className={styles.newSection}>
           <h1 className={styles.text2}>Our University</h1>
           <div className={styles.buildingSection}>
