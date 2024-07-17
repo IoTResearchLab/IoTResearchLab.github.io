@@ -30,7 +30,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/infra">[ARC] Building IOT infrastructure</a>,
+    title: <a href="/infra">[ARC] Building IoT infrastructure</a>,
     imgSrc: '/img/project1.png',
     description: (
       <>
@@ -38,7 +38,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/infra">[ARC] Dynamic Access Control in IOT Scenarios</a>,
+    title: <a href="/infra">[ARC] Dynamic Access Control in IoT Scenarios</a>,
     imgSrc: '/img/project3.jpeg',
     description: (
       <>

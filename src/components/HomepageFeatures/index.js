@@ -7,7 +7,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 const FeatureList = [
   
   {
-    title: <a href="/traffic">IOT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
+    title: <a href="/traffic">IoT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
     imgSrc: '/img/traffic.webp', // Use relative path here
     description: (
       <>
@@ -16,7 +16,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/health">IOT in Health Care</a>,
+    title: <a href="/health">IoT in Health Care</a>,
     imgSrc: '/img/health.webp',
     description: (
       <>
@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/infra">IOT Infrastructure and Applications</a>,
+    title: <a href="/infra">IoT Infrastructure and Applications</a>,
     imgSrc: '/img/infra.webp',
     description: (
       <>
@@ -68,6 +68,7 @@ export default function HomepageFeatures() {
         <div style={{ clear: 'both', width: '100%', textAlign: 'center', marginTop: '40px' }}>
           <a href="/research" className={styles.customButton}> More Research Projects</a>
         </div>
+        <hr style={{ margin: '2rem 0' }} />
         <div className={styles.newSection}>
           <h1 className={styles.text2}>Our University</h1>
           <div className={styles.buildingSection}>

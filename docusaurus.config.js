@@ -8,10 +8,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'IOT Research Lab',
+  title: 'IoT Research Lab',
   tagline: 'We make the future',
   favicon: 'img/logo.svg',
-
 
   // Set the production url of your site here
   url: 'https://sensorsconnect.github.io/',
@@ -73,9 +72,13 @@ const config = {
         },
         items: [
           { to: '/team', label: 'Our Team', position: 'left' },
-          { to: '/Research', label: 'Research', position: 'left' },
           { to: '/Publications', label: 'Publications', position: 'left' },
+          { to: '/traffic', label: 'Smart Mobility', position: 'left' },
+          { type: 'search', position: 'right' }, 
           { to: '/join-us', label: 'Contact Us', position: 'right' },
+          { to: '/health', label: 'IoT in Health Care', position: 'left' },
+          { to: '/infra', label: 'IoT Infrastructure', position: 'left' },
+       
         ],
       },
       footer: {
@@ -95,7 +98,7 @@ const config = {
                 },
               },
               {
-                label: 'Linkedin',
+                label: 'LinkedIn',
                 href: 'https://www.linkedin.com/company/iot-research-lab/',
                 logo: {
                   alt: 'LinkedIn',
@@ -107,20 +110,31 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} IOT Research Lab @Ontario Tech University`,
+        copyright: `Copyright © ${new Date().getFullYear()} IoT Research Lab @Ontario Tech University`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
-    customFields:{
-      healthTitle:"IOT in Health Care",
-      infraTitle:"IOT Infrastructure and Applications",
-      trafficTitle:"IOT in Traffic Management",
-
-      
-    }
+  plugins: [
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        // Options here
+        indexDocs: true,          // Whether to index docs
+        indexBlog: true,          // Whether to index blog posts
+        indexPages: true,         // Whether to index static pages
+        language: "en",           // Language of your documentation
+        // Additional options can be added as needed
+      },
+    ],
+  ],
+  customFields:{
+    healthTitle:"IoT in Health Care",
+    infraTitle:"IoT Infrastructure and Applications",
+    trafficTitle:"IoT in Traffic Management",
+  },
 };
 
 export default config;
