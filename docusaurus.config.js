@@ -55,14 +55,16 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/team', label: 'Our Team', position: 'left' },
-        { to: '/Publications', label: 'Publications', position: 'left' },
-        { to: '/traffic', label: 'Smart Mobility', position: 'left' },
+
+        
+        { to: '/traffic', label: 'IoT in Smart Mobility', position: 'left' },
         { type: 'search', position: 'right' },
         { to: '/join-us', label: 'Contact Us', position: 'right' },
         { to: '/health', label: 'IoT in Health Care', position: 'left' },
         { to: '/infra', label: 'IoT Infrastructure', position: 'left' },
-      ],
+        { to: '/Publications', label: 'Publications', position: 'left' },
+             { to: '/team', label: 'Our Team', position: 'left' }, 
+            ],
     },
     footer: {
       style: 'light',
@@ -140,7 +142,7 @@ const config = {
   customFields:{
     healthTitle:"IoT in Health Care",
     infraTitle:"IoT Infrastructure and Applications",
-    trafficTitle:"IoT in Traffic Management",
+    trafficTitle:"IoT in Smart Mobillity",
   },
 };
 

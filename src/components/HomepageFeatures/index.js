@@ -7,12 +7,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 const FeatureList = [
   
   {
-    title: <a href="/traffic">IoT-driven Traffic Management: Enhancing Urban Mobility with Smart Solutions</a>,
+    title: <a href="/traffic">Smart Mobility and Traffic Management</a>,
     imgSrc: '/img/traffic.webp', // Use relative path here
     description: (
       <>
-        Addresses the challenges of maintaining user privacy amidst the proliferation of interconnected devices, emphasizing strategies and technologies to secure personal data and communications in IoT environments.
-      </>
+     We try to utilize IoT technology to enhance urban transportation systems. By integrating real-time data from sensors and devices, these systems optimize traffic flow, reduce congestion, and improve safety. Innovations like adaptive traffic signals and connected vehicles contribute to more efficient and sustainable urban mobility.
+     </>
     ),
   },
   {
