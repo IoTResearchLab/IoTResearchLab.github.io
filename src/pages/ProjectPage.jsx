@@ -8,6 +8,7 @@ const ProjectPage = (props) => {
 
   return (
     <Layout>
+      <main>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
         <div style={{ textAlign: 'center', flex: 1 }}>
           <h1>{title}</h1>
@@ -17,6 +18,7 @@ const ProjectPage = (props) => {
           <img src={img} alt={title} style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'cover' }} />
         </div>
       </div>
+      </main>
     </Layout>
   );
 };
