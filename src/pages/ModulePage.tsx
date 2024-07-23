@@ -1,11 +1,14 @@
 import Layout from "@theme/Layout";
 import React from "react";
+
 const MyCustomPage = (props) => {
-  const customData = props.route.customData;
+  // Ensure customData is defined and properly accessed
+  const customData = props.route?.customData || {};
+
   return (
     <Layout>
-      // this will show the text "data" on the page
-      <h1>{customData.some}</h1>
+      {/* Render a default message if customData.some is undefined */}
+      <h1>{customData.some || 'Default Data'}</h1>
     </Layout>
   );
 };
