@@ -5,7 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from 'prism-react-renderer';
-
+import path from 'path';
+import fs from 'fs';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'IoT Research Lab',
@@ -75,7 +76,8 @@ const config = {
           { to: '/Publications', label: 'Publications', position: 'left' },
           { to: '/traffic', label: 'Smart Mobility', position: 'left' },
           { type: 'search', position: 'right' }, 
-          { to: '/join-us', label: 'Contact Us', position: 'right' },
+          // { to: '/join-us', label: 'Contact Us', position: 'right' },
+          { to: '/ModulePage', label: 'Contact Us', position: 'right' },
           { to: '/health', label: 'IoT in Health Care', position: 'left' },
           { to: '/infra', label: 'IoT Infrastructure', position: 'left' },
        
@@ -118,17 +120,44 @@ const config = {
       },
     }),
   plugins: [
-    [
-      require.resolve('@cmfcmf/docusaurus-search-local'),
-      {
-        // Options here
-        indexDocs: true,          // Whether to index docs
-        indexBlog: true,          // Whether to index blog posts
-        indexPages: true,         // Whether to index static pages
-        language: "en",           // Language of your documentation
-        // Additional options can be added as needed
-      },
-    ],
+    async function pagesGenPlugin(context, options) {
+      return {
+        // a unique name for this plugin
+        name: "pages-gen",
+        // lifecycle callback
+        async loadContent() {
+          return {some: "data"} ;
+        },
+        // lifecycle callback
+        async contentLoaded({ content, actions }) {
+          let content1 = {some: "YALHWAAAY"} 
+          const {some} =  content1
+          // optional: use Promise.all to execute multiple async functions at once
+          // this will speed things up by creating pages in parallel
+          await Promise.all(
+            [{
+              myPageData: "Bye bitches",
+            }].map(async (page) => {
+              return actions.addRoute({
+                // this is the path slug
+                // you can make it dynamic here
+                path: `/some-${page.myPageData}`,
+                // the page component used to render the page
+                component: require.resolve( "./src/pages/ModulePage.tsx"),
+                // will only match for exactly matching paths
+                exact: true,
+                // you can use this to optionally overwrite certain theme components
+                // see here: https://github.com/facebook/docusaurus/blob/main/packages/docusaurus-plugin-content-blog/src/index.ts#L343
+                modules: {},
+                // any extra custom data keys are passed to the page
+                // in this case, we merge the page data together with the loaded content data
+                customData: {...content1, ...page}
+              });
+            })
+          );
+        },
+      }
+    }
   ],
   customFields:{
     healthTitle:"IoT in Health Care",
