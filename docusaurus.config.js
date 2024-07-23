@@ -137,6 +137,11 @@ const config = {
       };
     },
   ],
+  customFields:{
+    healthTitle:"IoT in Health Care",
+    infraTitle:"IoT Infrastructure and Applications",
+    trafficTitle:"IoT in Traffic Management",
+  },
 };
 
 export default config;
