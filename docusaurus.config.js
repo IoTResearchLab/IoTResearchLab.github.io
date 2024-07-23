@@ -102,7 +102,16 @@ const config = {
       darkTheme: prismThemes.dracula,
     },
   },
-  plugins: [
+  plugins: [[
+    require.resolve('@cmfcmf/docusaurus-search-local'),
+    {
+      // Options here
+              // Whether to index docs
+              // Whether to index blog posts
+      indexPages: true,         // Whether to index static pages
+      language: "en",           // Language of your documentation
+      // Additional options can be added as needed
+    },],
     async function pagesGenPlugin(context, options) {
       return {
         name: 'pages-gen',
