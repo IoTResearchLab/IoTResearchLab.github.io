@@ -104,7 +104,9 @@ const config = {
       return {
         name: 'pages-gen',
         async loadContent() {
-          const uri = process.env.MONGODB_URI;
+          console.log('Loading content from MongoDB...');
+          //const uri = process.env.MONGODB_URI;
+          const uri ='mongodb+srv://read-only:iotresearchlab@cluster0.drxlgbe.mongodb.net/';
           if (!uri) {
             console.error('MONGODB_URI is not defined');
             return []; // Return an empty array if the URI is not defined
@@ -127,6 +129,7 @@ const config = {
           }
         },
         async contentLoaded({ content, actions }) {
+          console.log('Content loaded:', content);
           const { addRoute } = actions;
 
           if (Array.isArray(content)) {
