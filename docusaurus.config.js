@@ -1,17 +1,9 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import { themes as prismThemes } from 'prism-react-renderer';
-// @ts-check
-// @ts-check
-// @ts-check
-import { promises as fs } from 'fs';
-import path from 'path';
+import { MongoClient } from 'mongodb'; 
+import dotenv from 'dotenv';
+dotenv.config();  // Only needed if you have a .env file for local development
 
-/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'IoT Research Lab',
   tagline: 'We make the future',
@@ -55,16 +47,14 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
-
-        
         { to: '/traffic', label: 'IoT in Smart Mobility', position: 'left' },
         { type: 'search', position: 'right' },
         { to: '/join-us', label: 'Contact Us', position: 'right' },
         { to: '/health', label: 'IoT in Health Care', position: 'left' },
         { to: '/infra', label: 'IoT Infrastructure', position: 'left' },
         { to: '/Publications', label: 'Publications', position: 'left' },
-             { to: '/team', label: 'Our Team', position: 'left' }, 
-            ],
+        { to: '/team', label: 'Our Team', position: 'left' },
+      ],
     },
     footer: {
       style: 'light',
@@ -102,27 +92,38 @@ const config = {
       darkTheme: prismThemes.dracula,
     },
   },
-  plugins: [[
-    require.resolve('@cmfcmf/docusaurus-search-local'),
-    {
-      // Options here
-              // Whether to index docs
-              // Whether to index blog posts
-      indexPages: true,         // Whether to index static pages
-      language: "en",           // Language of your documentation
-      // Additional options can be added as needed
-    },],
+  plugins: [
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        indexPages: true,
+        language: "en",
+      },
+    ],
     async function pagesGenPlugin(context, options) {
       return {
         name: 'pages-gen',
         async loadContent() {
-          const jsonFilePath = path.resolve(__dirname, 'pages.json');
+          const uri = process.env.MONGODB_URI;
+          if (!uri) {
+            console.error('MONGODB_URI is not defined');
+            return []; // Return an empty array if the URI is not defined
+          }
+          const dbName = 'lab-data';
+          const collectionName = 'projects';
+          const client = new MongoClient(uri);
+
           try {
-            const fileContent = await fs.readFile(jsonFilePath, 'utf8');
-            return JSON.parse(fileContent);
+            await client.connect();
+            const database = client.db(dbName);
+            const collection = database.collection(collectionName);
+            const data = await collection.find({}).toArray();
+            return data;
           } catch (error) {
-            console.error('Error reading or parsing pages.json:', error);
+            console.error('Error connecting to MongoDB or fetching data:', error);
             return [];
+          } finally {
+            await client.close();
           }
         },
         async contentLoaded({ content, actions }) {
@@ -148,10 +149,11 @@ const config = {
       };
     },
   ],
-  customFields:{
-    healthTitle:"IoT in Health Care",
-    infraTitle:"IoT Infrastructure and Applications",
-    trafficTitle:"IoT in Smart Mobillity",
+  customFields: {
+    healthTitle: "IoT in Health Care",
+    infraTitle: "IoT Infrastructure and Applications",
+    trafficTitle: "IoT in Smart Mobility",
+    mongoURI: process.env.MONGODB_URI,
   },
 };
 
