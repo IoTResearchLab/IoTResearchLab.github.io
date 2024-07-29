@@ -2,7 +2,7 @@ import Layout from "@theme/Layout";
 import React from "react";
 
 const ProjectPage = (props) => {
-  // Default values to avoid destructure errors if customData is undefined
+
   const { customData = {} } = props.route || {};
   const { title = 'Default Title', content = 'Default Content', img = '/default.png' } = customData;
 
