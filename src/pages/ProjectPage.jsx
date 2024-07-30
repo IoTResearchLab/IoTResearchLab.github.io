@@ -1,24 +1,50 @@
-import Layout from "@theme/Layout";
-import React from "react";
+// src/pages/ProjectPage.jsx
+import React from 'react';
+import Layout from '@theme/Layout';
+import './ProjectPage.css'; // Import the stylesheet
 
 const ProjectPage = (props) => {
+  const { customData } = props;
 
-  const { customData = {} } = props.route || {};
-  const { title = 'Default Title', content = 'Default Content', img = '/default.png' } = customData;
+  console.log('customData:', customData); // Debug log
+
+  if (!customData) {
+    return <div>Loading...</div>;
+  }
+
+  const { title, subtitle, introduction, paragraphs, publications } = customData;
 
   return (
-    <Layout>
-      <main>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-        <div style={{ textAlign: 'center', flex: 1 }}>
-          <h1>{title}</h1>
-          <p>{content}</p>
-        </div>
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <img src={img} alt={title} style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'cover' }} />
-        </div>
+    <Layout title={title}>
+      <div className="container">
+        <h1>{title}</h1>
+        {subtitle && <h2>{subtitle}</h2>}
+        <p>{introduction}</p>
+        {paragraphs.map((paragraph, index) => (
+          <div key={index}>
+            {paragraph.title && <h3>{paragraph.title}</h3>}
+            <p>{paragraph.paragraph}</p>
+            {paragraph.img && <img src={paragraph.img} alt={paragraph.title} style={{ maxWidth: '100%' }} />}
+            <hr style={{ margin: '2rem 0' }} />
+          </div>
+        ))}
+        {publications.length > 0 && (
+          <div>
+            <h2>Publications</h2>
+            <ul>
+              {publications.map((publication, index) => (
+                <li key={index}>
+                  <a href={publication.url} target="_blank" rel="noopener noreferrer">
+                    {publication.title}
+                  </a>
+                  <p>Authors: {publication.authors}</p>
+                  <p>Date: {publication.date}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
-      </main>
     </Layout>
   );
 };
