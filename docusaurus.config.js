@@ -1,11 +1,52 @@
-// @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
-import fs from 'fs';
-import path from 'path';
+const fetch = require('node-fetch');
+const dotenv = require('dotenv');
+dotenv.config();
 
-// Only needed if you have a .env file for local development
-// import dotenv from 'dotenv';
-// dotenv.config();
+const backendServerUri = 'https://iot-backend-server-sparkling-sun-1719.fly.dev/projects';
+
+async function pagesGenPlugin(context, options) {
+  return {
+    name: 'pages-gen',
+    async loadContent() {
+      try {
+        const response = await fetch(backendServerUri);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log('Fetched data:', data);  // Log the fetched data
+        return data;
+      } catch (error) {
+        console.error('Error fetching data from backend server:', error);
+        return [];
+      }
+    },
+    async contentLoaded({ content, actions }) {
+      const { addRoute } = actions;
+
+      if (Array.isArray(content)) {
+        await Promise.all(
+          content.map(async (page) => {
+            if (typeof page === 'object' && page !== null) {
+              console.log('Adding route for page:', page);  // Log the page being added
+              return addRoute({
+                path: `/${page.slug}`,
+                component: require.resolve('./src/pages/ProjectPage.jsx'),
+                exact: true,
+                props: {
+                  customData: page
+                },
+              });
+            }
+          })
+        );
+      } else {
+        console.error('Invalid content format:', content);
+      }
+    },
+  };
+}
 
 const config = {
   title: 'IoT Research Lab',
@@ -97,51 +138,13 @@ const config = {
   },
   plugins: [
     [
-      require.resolve('@cmfcmf/docusaurus-search-local'),
+      '@cmfcmf/docusaurus-search-local',
       {
         indexPages: true,
         language: "en",
       },
     ],
-    async function pagesGenPlugin(context, options) {
-      return {
-        name: 'pages-gen',
-        async loadContent() {
-          console.log('Loading content from pages.json...');
-          
-          const filePath = path.resolve(__dirname, 'pages.json');
-          
-          try {
-            const data = fs.readFileSync(filePath, 'utf-8');
-            return JSON.parse(data);
-          } catch (error) {
-            console.error('Error reading pages.json:', error);
-            return [];
-          }
-        },
-        async contentLoaded({ content, actions }) {
-          console.log('Content loaded:', content);
-          const { addRoute } = actions;
-
-          if (Array.isArray(content)) {
-            await Promise.all(
-              content.map(async (page) => {
-                if (typeof page === 'object' && page !== null) {
-                  return addRoute({
-                    path: `/${page.slug}`,  // Path to generate, e.g., /project1
-                    component: require.resolve('./src/pages/ProjectPage.jsx'),
-                    exact: true,
-                    customData: page,  // Pass the page data to your component
-                  });
-                }
-              })
-            );
-          } else {
-            console.error('Invalid content format:', content);
-          }
-        },
-      };
-    },
+    pagesGenPlugin,
   ],
   customFields: {
     healthTitle: "IoT in Health Care",
@@ -151,4 +154,4 @@ const config = {
   },
 };
 
-export default config;
+module.exports = config;

@@ -1,26 +1,70 @@
-import Layout from "@theme/Layout";
-import React from "react";
+// src/pages/ProjectPage.jsx
+import React from 'react';
+import Layout from '@theme/Layout';
+import './ProjectPage.css'; 
 
 const ProjectPage = (props) => {
+  const { customData } = props;
 
-  const { customData = {} } = props.route || {};
-  const { title = 'Default Title', content = 'Default Content', img = '/default.png' } = customData;
+  console.log('customData:', customData);
+  if (!customData) {
+    return <div>Loading...</div>;
+  }
+
+  const { title, subtitle, introduction, paragraphs, publications } = customData;
 
   return (
-    <Layout>
-      <main>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }}>
-        <div style={{ textAlign: 'center', flex: 1 }}>
-          <h1>{title}</h1>
-          <p>{content}</p>
-        </div>
-        <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <img src={img} alt={title} style={{ maxWidth: '100%', maxHeight: '300px', objectFit: 'cover' }} />
-        </div>
+    <main>
+    <Layout title={title}>
+      <div className="project-page-container">
+        <h1>{title}</h1>
+        {subtitle && <h2>{subtitle}</h2>}
+        <p>{introduction}</p>
+        <hr style={{ margin: '2rem 0' }} />
+
+        {paragraphs.map((paragraph, index) => (
+          <div key={index}>
+              {paragraph.title && <h3>{paragraph.title}</h3>}
+            <div className="paragraph-container">
+            {paragraph.paragraph && <p>{paragraph.paragraph}</p>}
+            {paragraph.img && <img src={paragraph.img} alt={paragraph.title} />}
+            
+            </div>
+            <hr style={{ margin: '2rem 0' }} />
+          </div>
+        ))}
+        {publications.length > 0 && (
+          <div>
+            <h3>Publications</h3>
+            <ul>
+              {publications.map((publication, index) => (
+                <li key={index}>
+                  <a href={publication.url} target="_blank" rel="noopener noreferrer">
+                    {publication.title}
+                  </a>
+                  <br/>
+                  <pub1>{publication.authors}</pub1>
+                  <br/>
+                  <publ>{publication.date}</publ>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
-      </main>
     </Layout>
+    </main>
   );
 };
 
+
+
 export default ProjectPage;
+/* {paragraphs.map((paragraph, index) => (
+          <div key={index}>
+            {paragraph.title && <h3>{paragraph.title}</h3>}
+            <p>{paragraph.paragraph}</p>
+            {paragraph.img && <img src={paragraph.img} alt={paragraph.title} style={{ maxWidth: '100%' }} />}
+            <hr style={{ margin: '2rem 0' }} />
+          </div>
+        ))}*/
