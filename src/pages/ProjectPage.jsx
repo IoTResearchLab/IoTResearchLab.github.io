@@ -26,8 +26,9 @@ const ProjectPage = (props) => {
           <div key={index}>
               {paragraph.title && <h3>{paragraph.title}</h3>}
             <div className="paragraph-container">
-              {paragraph.img && <img src={paragraph.img} alt={paragraph.title} />}
-              <p>{paragraph.paragraph}</p>
+            {paragraph.paragraph && <p>{paragraph.paragraph}</p>}
+            {paragraph.img && <img src={paragraph.img} alt={paragraph.title} />}
+            
             </div>
             <hr style={{ margin: '2rem 0' }} />
           </div>
