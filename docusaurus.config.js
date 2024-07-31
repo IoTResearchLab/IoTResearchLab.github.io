@@ -1,8 +1,11 @@
 // @ts-check
 import { themes as prismThemes } from 'prism-react-renderer';
-import { MongoClient } from 'mongodb'; 
-import dotenv from 'dotenv';
-dotenv.config();  // Only needed if you have a .env file for local development
+import fs from 'fs';
+import path from 'path';
+
+// Only needed if you have a .env file for local development
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 const config = {
   title: 'IoT Research Lab',
@@ -104,28 +107,16 @@ const config = {
       return {
         name: 'pages-gen',
         async loadContent() {
-          console.log('Loading content from MongoDB...');
-          //const uri = process.env.MONGODB_URI;
-          const uri ='mongodb+srv://read-only:iotresearchlab@cluster0.drxlgbe.mongodb.net/';
-          if (!uri) {
-            console.error('MONGODB_URI is not defined');
-            return []; // Return an empty array if the URI is not defined
-          }
-          const dbName = 'lab-data';
-          const collectionName = 'projects';
-          const client = new MongoClient(uri);
-
+          console.log('Loading content from pages.json...');
+          
+          const filePath = path.resolve(__dirname, 'pages.json');
+          
           try {
-            await client.connect();
-            const database = client.db(dbName);
-            const collection = database.collection(collectionName);
-            const data = await collection.find({}).toArray();
-            return data;
+            const data = fs.readFileSync(filePath, 'utf-8');
+            return JSON.parse(data);
           } catch (error) {
-            console.error('Error connecting to MongoDB or fetching data:', error);
+            console.error('Error reading pages.json:', error);
             return [];
-          } finally {
-            await client.close();
           }
         },
         async contentLoaded({ content, actions }) {
