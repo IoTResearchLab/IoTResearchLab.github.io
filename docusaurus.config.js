@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const backendServerUri = 'http://localhost:3001/projects';
+const backendServerUri = 'https://iot-backend-server-sparkling-sun-1719.fly.dev/projects';
 
 async function pagesGenPlugin(context, options) {
   return {
