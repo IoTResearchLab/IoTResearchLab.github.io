@@ -88,8 +88,9 @@
   }
   .paragraph-container {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
   }
   
   .paragraph-container img {
@@ -98,4 +99,4 @@
   
   .paragraph-container p {
     flex: 1;
-  }
+    text-align: center;   }
