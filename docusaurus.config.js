@@ -128,9 +128,23 @@ const config = {
             },
           ],
         },
+        {
+          title: 'Contact Information',
+          items: [
+            {
+              html: `
+                <div>
+                  <p>Oshawa, Canada<br />L1G 0C5</p>
+                  <p>T: 905.721.8668 ext. 7365<br />F: 905.721.3370</p>
+                </div>
+              `,
+            },
+          ],
+        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} IoT Research Lab @Ontario Tech University`,
     },
+  
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
