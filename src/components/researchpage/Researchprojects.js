@@ -19,23 +19,23 @@ import project13 from './project13.png';
 import project14 from './project14.gif';
 
 const projects = [
-  { title: 'Road Detection Improvements Of Autnomos Vechiles', description: 'Description for project eleven.', image: project11 },
-  { title: 'Phone Of Things', description: 'Description for project thirteen.', image: project13 },
-  { title: 'Smart Intersictions, Making Our Roads Safer ', description: 'Description for project eight.', image: project8 },
+  { title: 'Road Detection Improvements Of Autnomos Vechiles', description: '', image: project11 },
+  { title: 'Phone Of Things', description: '', image: project13 },
+  { title: 'Smart Intersictions, Making Our Roads Safer ', description: '', image: project8 },
 
-  { title: 'Real-Time Traffic Analytics From live Camera Feeds ', description: 'Description for project ten.', image: project10 },
-  { title: 'Violent and Suspicious Events Detection System', description: 'Description for project fourteen.', image: project14 },
+  { title: 'Real-Time Traffic Analytics From live Camera Feeds ', description: '', image: project10 },
+  { title: 'Violent and Suspicious Events Detection System', description: '', image: project14 },
 
-  { title: 'Protecting User Privacy in the Connected world', description: 'Description for project two.', image: project2 },
-  { title: '[ARC] Building IoT infrastructure', description: 'Description for project one.', image: project1 },
+  { title: 'Protecting User Privacy in the Connected world', description: '.', image: project2 },
+  { title: '[ARC] Building IoT infrastructure', description: '', image: project1 },
 
-  { title: '[ARC] Dynamic Access Control in IoT Scenarios', description: 'Description for project three.', image: project3 },
-  { title: 'On-Demand Sensing For Smart City Services', description: 'Description for project four.', image: project4 },
-  { title: 'XBeats,A Smart ECG Monitoring Platform', description: 'Description for project five.', image: project5 },
-  { title: 'Farming Like Never: Yield Estimation and Visualization for Precision Agriculture', description: 'Description for project six.', image: project6 },
-  { title: 'Smart Roads and Traffic Prediction', description: 'Description for project seven.', image: project7 },
-  { title: 'Responding to Agitation/Agression in Dementia', description: 'Description for project nine.', image: project9 },
-  { title: 'RegTraffic: A Regression based Traffic Simulator ', description: 'Description for project twelve.', image: project12 },
+  { title: '[ARC] Dynamic Access Control in IoT Scenarios', description: '', image: project3 },
+  { title: 'On-Demand Sensing For Smart City Services', description: '', image: project4 },
+  { title: 'XBeats,A Smart ECG Monitoring Platform', description: '', image: project5 },
+  { title: 'Farming Like Never: Yield Estimation and Visualization for Precision Agriculture', description: '', image: project6 },
+  { title: 'Smart Roads and Traffic Prediction', description: '', image: project7 },
+  { title: 'Responding to Agitation/Agression in Dementia', description: '', image: project9 },
+  { title: 'RegTraffic: A Regression based Traffic Simulator ', description: '', image: project12 },
   // Add more projects as needed
 ];
 
