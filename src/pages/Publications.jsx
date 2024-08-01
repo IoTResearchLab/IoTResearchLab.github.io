@@ -45,7 +45,7 @@ const Publications = () => {
      
       <div className='container'>
     <div style={{ color: '#00427c' }}>
-      <h1>2023 Journal Papers</h1>
+      <h1 style={{marginTop :'2rem'}}>2023 Journal Papers</h1>
       <br />
       <br />
       {publications.map((publication, index) => (
