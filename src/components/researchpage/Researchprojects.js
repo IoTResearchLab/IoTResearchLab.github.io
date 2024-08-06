@@ -1,8 +1,7 @@
 import React from 'react';
 import './Researchprojects.css';
-import logo from './our-projects-logo.png'; // Ensure this path is correct
+import logo from './our-projects-logo.png'; 
 
-// Import image paths for each project
 import project1 from './project1.png';
 import project2 from './project2.jpeg';
 import project3 from './project3.jpeg';
@@ -19,24 +18,20 @@ import project13 from './project13.png';
 import project14 from './project14.gif';
 
 const projects = [
-  { title: 'Road Detection Improvements Of Autnomos Vechiles', description: '', image: project11 },
-  { title: 'Phone Of Things', description: '', image: project13 },
-  { title: 'Smart Intersictions, Making Our Roads Safer ', description: '', image: project8 },
-
-  { title: 'Real-Time Traffic Analytics From live Camera Feeds ', description: '', image: project10 },
-  { title: 'Violent and Suspicious Events Detection System', description: '', image: project14 },
-
-  { title: 'Protecting User Privacy in the Connected world', description: '.', image: project2 },
-  { title: '[ARC] Building IoT infrastructure', description: '', image: project1 },
-
-  { title: '[ARC] Dynamic Access Control in IoT Scenarios', description: '', image: project3 },
-  { title: 'On-Demand Sensing For Smart City Services', description: '', image: project4 },
-  { title: 'XBeats,A Smart ECG Monitoring Platform', description: '', image: project5 },
-  { title: 'Farming Like Never: Yield Estimation and Visualization for Precision Agriculture', description: '', image: project6 },
-  { title: 'Smart Roads and Traffic Prediction', description: '', image: project7 },
-  { title: 'Responding to Agitation/Agression in Dementia', description: '', image: project9 },
-  { title: 'RegTraffic: A Regression based Traffic Simulator ', description: '', image: project12 },
-  // Add more projects as needed
+  { title: 'Road Detection Improvements Of Autnomos Vechiles', description: '', image: project11, link: '/Road-Detection-Improvements-Of-Autnomos-Vechiles' },
+  { title: 'Phone Of Things', description: '', image: project13, link: '/phone-of-things' },
+  { title: 'Smart Intersictions, Making Our Roads Safer ', description: '', image: project8, link: '' },
+  { title: 'Real-Time Traffic Analytics From live Camera Feeds ', description: '', image: project10, link: '/Real-Time-Traffic-Analytics-From-live-Camera-Feeds' },
+  { title: 'Violent and Suspicious Events Detection System', description: '', image: project14, link: '/Violent-and-Suspicious-Events-Detection-System' },
+  { title: 'Protecting User Privacy in the Connected world', description: '.', image: project2, link: '/protecting-user-privacy-in-the-connected-world' },
+  { title: '[ARC] Building IoT infrastructure', description: '', image: project1, link: '' },
+  { title: '[ARC] Dynamic Access Control in IoT Scenarios', description: '', image: project3, link: '' },
+  { title: 'On-Demand Sensing For Smart City Services', description: '', image: project4, link: '/On-Demand-Sensing-For-Smart-City-Services' },
+  { title: 'XBeats,A Smart ECG Monitoring Platform', description: '', image: project5, link: '/XBeats-A-Smart-ECG-Monitoring-Platform' },
+  { title: 'Farming Like Never: Yield Estimation and Visualization for Precision Agriculture', description: '', image: project6, link: '/farming-like-never-yield-estimation-and-visualization-for-precision-agriculture' },
+  { title: 'Smart Roads and Traffic Prediction', description: '', image: project7, link: '/Smart-Roads-and-Traffic-Prediction.mdx' },
+  { title: 'Responding to Agitation/Agression in Dementia', description: '', image: project9, link: '/Responding-to-Agitation-Agression-in-Dementia.mdx' },
+  { title: 'RegTraffic: A Regression based Traffic Simulator ', description: '', image: project12, link: '/RegTraffic-A-Regression-based-Traffic-Simulator' },
 ];
 
 const ResearchProjects = () => {
@@ -49,7 +44,7 @@ const ResearchProjects = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <img src={project.image} alt={project.title} className="project-image" />
-            <h3>{project.title}</h3>
+            <h3><a href={project.link}>{project.title}</a></h3>
             <p>{project.description}</p>
           </div>
         ))}

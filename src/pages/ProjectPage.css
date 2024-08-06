@@ -94,8 +94,39 @@
   }
   
   .paragraph-container img {
-    max-width: 50%; /* Adjust as needed */
+    max-width: 100%;
+    height: auto;
+    margin:  2rem; 
+    display: block; 
+    padding: 20px; /* Adjust the padding as needed */
+    box-sizing: border-box; /* Ensure padding is included in the total width and height */
   }
+  
+  /* Add some additional responsiveness for different screen sizes */
+  @media (min-width: 600px) {
+    .paragraph-container img {
+      max-width: 30%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .paragraph-container img {
+      max-width: 35%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .paragraph-container img {
+      max-width: 45%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .paragraph-container img {
+      max-width: 50%;
+    }
+  }
+  
   
   .paragraph-container p {
     flex: 1;
