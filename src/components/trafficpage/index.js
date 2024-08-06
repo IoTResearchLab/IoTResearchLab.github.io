@@ -39,7 +39,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/traffic">RegTraffic: A Regression based Traffic Simulator</a>,
+    title: <a href="/RegTraffic-A-Regression-based-Traffic-Simulator">RegTraffic: A Regression based Traffic Simulator</a>,
     imgSrc: '/img/project12.png', // Use relative path here
     description: (
       <>

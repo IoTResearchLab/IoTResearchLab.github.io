@@ -15,7 +15,7 @@ async function pagesGenPlugin(context, options) {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log('Fetched data:', data);  // Log the fetched data
+        console.log('Fetched data:', data); 
         return data;
       } catch (error) {
         console.error('Error fetching data from backend server:', error);
@@ -29,7 +29,7 @@ async function pagesGenPlugin(context, options) {
         await Promise.all(
           content.map(async (page) => {
             if (typeof page === 'object' && page !== null) {
-              console.log('Adding route for page:', page);  // Log the page being added
+              console.log('Adding route for page:', page); 
               return addRoute({
                 path: `/${page.slug}`,
                 component: require.resolve('./src/pages/ProjectPage.jsx'),
