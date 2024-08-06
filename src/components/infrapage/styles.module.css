@@ -24,3 +24,6 @@
   object-fit: cover; /* Ensure the image covers the container */
 }
 
+.title{
+  color: #00427c;
+}

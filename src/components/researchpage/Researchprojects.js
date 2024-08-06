@@ -29,8 +29,8 @@ const projects = [
   { title: 'On-Demand Sensing For Smart City Services', description: '', image: project4, link: '/On-Demand-Sensing-For-Smart-City-Services' },
   { title: 'XBeats,A Smart ECG Monitoring Platform', description: '', image: project5, link: '/XBeats-A-Smart-ECG-Monitoring-Platform' },
   { title: 'Farming Like Never: Yield Estimation and Visualization for Precision Agriculture', description: '', image: project6, link: '/farming-like-never-yield-estimation-and-visualization-for-precision-agriculture' },
-  { title: 'Smart Roads and Traffic Prediction', description: '', image: project7, link: '/Smart-Roads-and-Traffic-Prediction.mdx' },
-  { title: 'Responding to Agitation/Agression in Dementia', description: '', image: project9, link: '/Responding-to-Agitation-Agression-in-Dementia.mdx' },
+  { title: 'Smart Roads and Traffic Prediction', description: '', image: project7, link: '/Smart-Roads-and-Traffic-Prediction' },
+  { title: 'Responding to Agitation/Agression in Dementia', description: '', image: project9, link: '/Responding-to-Agitation-Agression-in-Dementia' },
   { title: 'RegTraffic: A Regression based Traffic Simulator ', description: '', image: project12, link: '/RegTraffic-A-Regression-based-Traffic-Simulator' },
 ];
 
