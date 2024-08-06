@@ -54,6 +54,7 @@ const Publications = () => {
           {Object.keys(publications).map(year => (
             <div key={year} style={{ color: '#00427c' }}>
               <h1 style={{ marginTop: '2rem' }}>{year} Publications</h1>
+              <br/>
               {Object.keys(publications[year]).map(type => (
                 <div key={type}>
                   <h2>{type}</h2>

@@ -77,7 +77,7 @@ function Feature({ Svg, imgSrc, title, description }) {
         ) : null}
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h3" className={styles.title}>{title}</Heading>
         <p>{description}</p>
       </div>
     </div>
