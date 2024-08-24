@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="/Road-Detection-Improvements-Of-Autnomos-Vechiles">Road Detection Improvements Of Autnomos Vechiles</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Road-Detection-Improvements-Of-Autnomos-Vechiles">Road Detection Improvements Of Autnomos Vechiles</a>,
     imgSrc: '/img/project11.gif', // Use relative path here
     description: (
       <>
@@ -23,7 +23,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/Real-Time-Traffic-Analytics-From-live-Camera-Feeds">Real-Time Traffic Analytics From live Camera Feeds</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Real-Time-Traffic-Analytics-From-live-Camera-Feeds">Real-Time Traffic Analytics From live Camera Feeds</a>,
     imgSrc: '/img/project10.gif', // Use relative path here
     description: (
       <>
@@ -31,7 +31,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/Smart-Roads-and-Traffic-Prediction">Smart Roads and Traffic Prediction</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Smart-Roads-and-Traffic-Prediction">Smart Roads and Traffic Prediction</a>,
     imgSrc: '/img/project7.jpeg', // Use relative path here
     description: (
       <>
@@ -39,7 +39,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/RegTraffic-A-Regression-based-Traffic-Simulator">RegTraffic: A Regression based Traffic Simulator</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/RegTraffic-A-Regression-based-Traffic-Simulator">RegTraffic: A Regression based Traffic Simulator</a>,
     imgSrc: '/img/project12.png', // Use relative path here
     description: (
       <>

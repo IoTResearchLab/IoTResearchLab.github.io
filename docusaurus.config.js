@@ -83,6 +83,11 @@ const config = {
     ],
   ],
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     image: 'img/logo.svg',
     navbar: {
       title: 'Home',

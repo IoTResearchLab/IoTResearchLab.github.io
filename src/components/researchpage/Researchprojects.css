@@ -1,37 +1,57 @@
+:root {
+  --custom-header-color: #00427c;
+}
+
+[data-theme='dark'] {
+  --custom-header-color: #ffffff;
+}
+
+.titlestyle {
+  color: var(--custom-header-color);
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+
+
+/* Other styles */
 .research-projects {
   text-align: center;
   padding: 20px;
-  width: 100%; /* Make the container take the full width of the page */
+  width: 100%;
   box-sizing: border-box;
 }
 
 .logo {
-  width: 300px; /* Adjust the size as needed */
-  height: auto; /* Ensure the height adjusts automatically to maintain aspect ratio */
+  width: 300px;
+  height: auto;
   margin: 20px auto;
 }
 
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Center the items in the container */
-  margin: 0 -10px; /* Adjust container margin to counteract card margins */
+  justify-content: center;
+  margin: 0 -10px;
 }
 
 .project-card {
-  border: 1px solid #00427c;
+  border: 1px solid var(--custom-header-color);
+  
   padding: 20px;
-  flex: 1 1 45%; /* Flex-grow, flex-shrink, and flex-basis */
+  flex: 1 1 45%;
   margin: 10px;
   box-sizing: border-box;
-  text-align: center; /* Center the text */
-  color: #00427c; /* Change the text color */
+  text-align: center;
+  color: var(--custom-header-color);
 }
 
 .project-image {
   width: 100%;
   height: auto;
-  max-height: 300px; /* Set a maximum height for larger images */
+  max-height: 300px;
   border-radius: 5px;
   margin-bottom: 15px;
 }
@@ -47,5 +67,5 @@
 .text {
   text-align: center;
   padding: 2rem 0;
-  color: #00427c;
+  color: var(--custom-header-color);
 }

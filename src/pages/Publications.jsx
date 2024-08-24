@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import styles from './publications.module.css';
+import styles from './publications.module.css'; // External CSS file
 import Layout from '@theme/Layout';
+import Loading from './Loading';
+import { RingLoader } from 'react-spinners';
 
 const Publications = () => {
   const [publications, setPublications] = useState({});
@@ -36,7 +38,9 @@ const Publications = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <RingLoader color="#00427c" size={150} loading={loading} />
+  </div>;
   }
 
   if (error) {
@@ -50,23 +54,25 @@ const Publications = () => {
   return (
     <main>
       <Layout>
-        <div className='container'>
+        <div className={styles.container}>
           {Object.keys(publications).map(year => (
-            <div key={year} style={{ color: '#00427c' }}>
-              <h1 style={{ marginTop: '2rem' }}>{year} Publications</h1>
+            <div key={year} className={styles.yearSection}>
+              <h1 className={styles.yearTitle}>{year} Publications</h1>
               <br/>
               {Object.keys(publications[year]).map(type => (
                 <div key={type}>
-                  <h2>{type}</h2>
+                  <h2 className={styles.typeTitle}>{type}</h2>
                   {publications[year][type].map((publication, index) => (
-                    <div key={index} style={{ display: 'flex', alignItems: 'center', paddingBottom: '20px' }}>
-                      <div style={{ flex: 9 }}>
-                        <h2>{publication.title}</h2>
-                        <p>{publication.authors} <em>{publication.journal}, {publication.year}</em></p>
+                    <div key={index} className={styles.publicationItem}>
+                      <div className={styles.publicationInfo}>
+                        <h2 className={styles.publicationTitle}>{publication.title}</h2>
+                        <p className={styles.publicationDetails}>
+                          {publication.authors} <em>{publication.journal}, {publication.year}</em>
+                        </p>
                       </div>
-                      <div style={{ flex: 3, textAlign: 'right' }}>
+                      <div className={styles.pdfLink}>
                         <a href={publication.pdfUrl} target="_blank" rel="noopener noreferrer">
-                          <img src="/img/pdf.png" alt="PDF" className={styles['pdf-icon']} />
+                          <img src="/img/pdf.png" alt="PDF" className={styles.pdfIcon} />
                         </a>
                       </div>
                     </div>

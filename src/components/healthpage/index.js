@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="/XBeats-A-Smart-ECG-Monitoring-Platform">XBeats,A Smart ECG Monitoring Platform</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/XBeats-A-Smart-ECG-Monitoring-Platform">XBeats,A Smart ECG Monitoring Platform</a>,
     imgSrc: '/img/project5.gif',
     description: (
       <>
@@ -14,7 +14,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/Responding-to-Agitation-Agression-in-Dementia">Responding to Agitation/Agression in Dementia</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Responding-to-Agitation-Agression-in-Dementia">Responding to Agitation/Agression in Dementia</a>,
     imgSrc: '/img/project9.jpeg',
     description: (
       <>

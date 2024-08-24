@@ -1,21 +1,21 @@
 import React from 'react';
 import './Researchprojects.css';
-import logo from './our-projects-logo.png'; 
+import logo from '../../../static/img/our-projects-logo.png'; 
 
-import project1 from './project1.png';
-import project2 from './project2.jpeg';
-import project3 from './project3.jpeg';
-import project4 from './project4.jpeg';
-import project5 from './project5.gif';
-import project6 from './project6.gif';
-import project7 from './project7.jpeg';
-import project8 from './project8.jpeg';
-import project9 from './project9.jpeg';
-import project10 from './project10.gif';
-import project11 from './project11.gif';
-import project12 from './project12.png';
-import project13 from './project13.png';
-import project14 from './project14.gif';
+import project1 from '../../../static/img/project1.png';
+import project2 from '../../../static/img/project2.jpeg';
+import project3 from '../../../static/img/project3.jpeg';
+import project4 from '../../../static/img/project4.jpeg';
+import project5 from '../../../static/img/project5.gif';
+import project6 from '../../../static/img/project6.gif';
+import project7 from '../../../static/img/project7.jpeg';
+import project8 from '../../../static/img/project8.jpeg';
+import project9 from '../../../static/img/project9.jpeg';
+import project10 from '../../../static/img/project10.gif';
+import project11 from '../../../static/img/project11.gif';
+import project12 from '../../../static/img/project12.png';
+import project13 from '../../../static/img/project13.png';
+import project14 from '../../../static/img/project14.gif';
 
 const projects = [
   { title: 'Road Detection Improvements Of Autnomos Vechiles', description: '', image: project11, link: '/Road-Detection-Improvements-Of-Autnomos-Vechiles' },
@@ -44,7 +44,7 @@ const ResearchProjects = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <img src={project.image} alt={project.title} className="project-image" />
-            <h3><a href={project.link}>{project.title}</a></h3>
+            <h3 ><a className='text' href={project.link}>{project.title}</a></h3>
             <p>{project.description}</p>
           </div>
         ))}

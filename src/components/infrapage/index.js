@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a href="/violent-and-suspicious-events-detection-system">Phone Of Things</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/violent-and-suspicious-events-detection-system">Phone Of Things</a>,
     imgSrc: '/img/project13.png',
     description: (
       <>
@@ -14,7 +14,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/Violent-and-Suspicious-Events-Detection-System">Violent and Suspicious Events Detection System</a>,
+    title: <a  style={{  color: 'var(--custom-header-color)'}} href="/Violent-and-Suspicious-Events-Detection-System">Violent and Suspicious Events Detection System</a>,
     imgSrc: '/img/project14.gif',
     description: (
       <>
@@ -22,7 +22,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/protecting-user-privacy-in-the-connected-world">Protecting User Privacy in the Connected world</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/protecting-user-privacy-in-the-connected-world">Protecting User Privacy in the Connected world</a>,
     imgSrc: '/img/project2.jpeg',
     description: (
       <>
@@ -38,7 +38,7 @@ const FeatureList = [
     ),
   },
   {
-    title: '[ARC] Dynamic Access Control in IoT Scenarios',
+    title:'[ARC] Dynamic Access Control in IoT Scenarios',
     imgSrc: '/img/project3.jpeg',
     description: (
       <>
@@ -46,7 +46,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/On-Demand-Sensing-For-Smart-City-Services">On-Demand Sensing For Smart City Services</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}}href="/On-Demand-Sensing-For-Smart-City-Services">On-Demand Sensing For Smart City Services</a>,
     imgSrc: '/img/project4.jpeg',
     description: (
       <>
@@ -54,7 +54,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/farming-like-never-yield-estimation-and-visualization-for-precision-agriculture">Farming Like Never: Yield Estimation and Visualization for Precision Agriculture</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/farming-like-never-yield-estimation-and-visualization-for-precision-agriculture">Farming Like Never: Yield Estimation and Visualization for Precision Agriculture</a>,
     imgSrc: '/img/project6.gif',
     description: (
       <>
