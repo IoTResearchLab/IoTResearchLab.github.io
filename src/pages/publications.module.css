@@ -1,9 +1,59 @@
-.pdf-icon {
+.pdfIcon {
     float: right;
 
     width: 100px;
-    margin-left: 10px;
+    margin: 10px;
   }
 
 
+  :root {
+    --custom-header-color: #00427c;
+   
+  }
   
+  [data-theme='dark'] {
+    --custom-header-color: #ffffff;
+  
+  }
+  .container {
+    color: var(--custom-header-color);
+  }
+
+.yearSection {
+    margin: 2rem;
+}
+
+.yearTitle {
+    margin: 2rem;
+}
+
+.typeTitle {
+  margin-left:2rem ;
+  color: var(--custom-header-color);
+}
+
+.publicationItem {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin: 1rem;
+}
+
+.publicationInfo {
+    flex: 9;
+}
+
+.publicationTitle {
+    margin: 1rem;
+}
+
+.publicationDetails {
+    margin: 1rem;
+    color: var(--custom-header-color);
+  }
+
+.pdfLink {
+    flex: 3;
+    text-align: right;
+}
+

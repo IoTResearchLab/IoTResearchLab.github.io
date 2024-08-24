@@ -12,7 +12,7 @@
 .text {
   text-align: center;
   padding: 2rem 0;
-  color: #00427c;
+  color: var(--custom-header-color);
 }
 
 /* styles.module.css */
@@ -25,5 +25,14 @@
 }
 
 .title{
-  color: #00427c;
+  color: var(--custom-header-color);
+}
+:root {
+  --custom-header-color: #00427c;
+ 
+}
+
+[data-theme='dark'] {
+  --custom-header-color: #ffffff;
+
 }

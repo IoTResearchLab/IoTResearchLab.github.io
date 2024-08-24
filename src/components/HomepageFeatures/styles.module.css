@@ -12,13 +12,13 @@
 .text {
   text-align: center;
   padding: 2rem 0;
-  color: #00427c;
+  color: var(--custom-header-color);
  
 }
 .text2 {
   text-align: center;
   padding: 2rem 0;
-  color: #00427c;
+  color: var(--custom-header-color);
   margin-bottom: 60px;
 }
 
@@ -112,4 +112,13 @@
 .customButton2:hover {
   background-color: #ffffff;
   transform: translateY(-2px);
+}
+:root {
+  --custom-header-color: #00427c;
+ 
+}
+
+[data-theme='dark'] {
+  --custom-header-color: #ffffff;
+
 }

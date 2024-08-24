@@ -15,7 +15,7 @@
 .text {
   text-align: center;
   padding: 2rem 0;
-  color: #00427c;
+  color: var(--custom-header-color);
 }
 
 .featureImg {
@@ -70,4 +70,14 @@
   .text {
     padding: 1rem 0;
   }
+}
+
+:root {
+  --custom-header-color: #00427c;
+ 
+}
+
+[data-theme='dark'] {
+  --custom-header-color: #ffffff;
+
 }

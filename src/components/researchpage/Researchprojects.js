@@ -44,7 +44,7 @@ const ResearchProjects = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <img src={project.image} alt={project.title} className="project-image" />
-            <h3><a href={project.link}>{project.title}</a></h3>
+            <h3 ><a className='text' href={project.link}>{project.title}</a></h3>
             <p>{project.description}</p>
           </div>
         ))}

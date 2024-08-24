@@ -7,8 +7,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 const FeatureList = [
   
   {
-    title: <a href="/traffic">Smart Mobility and Traffic Management</a>,
-    imgSrc: '/img/traffic.webp', // Use relative path here
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/traffic">Smart Mobility and Traffic Management</a>,
+    imgSrc: '/img/smart-city.webp', // Use relative path here
     description: (
       <>
      We try to utilize IoT technology to enhance urban transportation systems. By integrating real-time data from sensors and devices, these systems optimize traffic flow, reduce congestion, and improve safety. Innovations like adaptive traffic signals and connected vehicles contribute to more efficient and sustainable urban mobility.
@@ -16,7 +16,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/health">IoT in Health Care</a>,
+    title: <a  style={{  color: 'var(--custom-header-color)'}}href="/health">IoT in Health Care</a>,
     imgSrc: '/img/health.webp',
     description: (
       <>
@@ -25,7 +25,7 @@ const FeatureList = [
     ),
   },
   {
-    title: <a href="/infra">IoT Infrastructure and Applications</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/infra">IoT Infrastructure and Applications</a>,
     imgSrc: '/img/infra.webp',
     description: (
       <>
