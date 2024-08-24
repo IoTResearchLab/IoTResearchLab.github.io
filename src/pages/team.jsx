@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './team.module.css';
 import Layout from '@theme/Layout';
+import Loading from './Loading';
+import { RingLoader } from 'react-spinners';
 
 const Team = () => {
   const [team, setTeam] = useState({});
@@ -35,7 +37,9 @@ const Team = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <RingLoader color="#00427c" size={150} loading={loading} />
+  </div>;
   }
 
   if (error) {

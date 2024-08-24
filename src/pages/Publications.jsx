@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styles from './publications.module.css'; // External CSS file
 import Layout from '@theme/Layout';
+import Loading from './Loading';
+import { RingLoader } from 'react-spinners';
 
 const Publications = () => {
   const [publications, setPublications] = useState({});
@@ -36,7 +38,9 @@ const Publications = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <RingLoader color="#00427c" size={150} loading={loading} />
+  </div>;
   }
 
   if (error) {
