@@ -1,59 +1,146 @@
 .pdfIcon {
-    float: right;
+  float: right;
+  width: 100px;
+  margin: 10px;
+}
 
-    width: 100px;
-    margin: 10px;
-  }
+/* Root color variables */
+:root {
+  --custom-header-color: #00427c;
+}
 
+[data-theme='dark'] {
+  --custom-header-color: #ffffff;
+}
 
-  :root {
-    --custom-header-color: #00427c;
-   
-  }
-  
-  [data-theme='dark'] {
-    --custom-header-color: #ffffff;
-  
-  }
-  .container {
-    color: var(--custom-header-color);
-  }
+.container {
+  color: var(--custom-header-color);
+  font-size: 18px; /* Base font size */
+}
 
 .yearSection {
-    margin: 2rem;
+  margin: 2rem;
+  font-size: 20px;
 }
 
 .yearTitle {
-    margin: 2rem;
+  margin: 2rem;
+  font-size: 24px;
 }
 
 .typeTitle {
-  margin-left:2rem ;
+  margin-left: 2rem;
   color: var(--custom-header-color);
+  font-size: 22px;
 }
 
 .publicationItem {
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px;
-    margin: 1rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin: 1rem;
+  font-size: 18px;
 }
 
 .publicationInfo {
-    flex: 9;
+  flex: 9;
 }
 
 .publicationTitle {
-    margin: 1rem;
+  margin: 1rem;
+  font-size: 20px;
 }
 
 .publicationDetails {
-    margin: 1rem;
-    color: var(--custom-header-color);
-  }
-
-.pdfLink {
-    flex: 3;
-    text-align: right;
+  margin: 1rem;
+  color: var(--custom-header-color);
+  font-size: 18px;
 }
 
+.pdfLink {
+  flex: 3;
+  text-align: right;
+  font-size: 16px;
+}
+
+/* Responsive Adjustments */
+
+/* For screens smaller than 768px (tablets and smaller) */
+@media (max-width: 768px) {
+  .container {
+      font-size: 16px;
+  }
+
+  .pdfIcon {
+      width: 80px;
+      margin: 5px;
+  }
+
+  .yearSection, .yearTitle, .typeTitle, .publicationTitle, .publicationDetails {
+      margin: 1rem;
+  }
+
+  .yearTitle {
+      font-size: 22px;
+  }
+
+  .typeTitle {
+      font-size: 20px;
+  }
+
+  .publicationItem {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 16px;
+  }
+
+  .publicationTitle {
+      font-size: 18px;
+  }
+
+  .pdfLink {
+      flex: none;
+      text-align: left;
+      margin-top: 1rem;
+      font-size: 14px;
+  }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+  .container {
+      font-size: 14px;
+  }
+
+  .pdfIcon {
+      width: 60px;
+      margin: 3px;
+  }
+
+  .yearSection, .yearTitle, .typeTitle, .publicationTitle, .publicationDetails {
+      margin: 0.5rem;
+  }
+
+  .yearTitle {
+      font-size: 20px;
+  }
+
+  .typeTitle {
+      font-size: 18px;
+  }
+
+  .publicationItem {
+      margin: 0.5rem;
+      font-size: 14px;
+  }
+
+  .publicationTitle {
+      font-size: 16px;
+  }
+
+  .pdfLink {
+      text-align: left;
+      margin-top: 0.5rem;
+      font-size: 12px;
+  }
+}
