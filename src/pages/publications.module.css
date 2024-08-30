@@ -19,13 +19,13 @@
 }
 
 .yearSection {
-  margin: 2rem;
+  margin: 2.5rem;
   font-size: 20px;
 }
 
 .yearTitle {
   margin: 2rem;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .typeTitle {
@@ -41,14 +41,29 @@
   margin: 1rem;
   font-size: 18px;
 }
+.publicationItem2 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  font-size: 18px;
+  margin-left: 1rem;
+
+}
 
 .publicationInfo {
   flex: 9;
+  align-items: flex-start; /* Aligns items to the start of the flex container, helping with text alignment */
+
 }
 
 .publicationTitle {
   margin: 1rem;
-  font-size: 20px;
+  font-size: 28px;
+  color: var(--custom-header-color);
+  font-weight: bold;
+  text-align: left; /* Ensures all lines in a multi-line title align to the left */
+
+
 }
 
 .publicationDetails {
@@ -82,6 +97,7 @@
 
   .yearTitle {
       font-size: 22px;
+      
   }
 
   .typeTitle {
@@ -92,10 +108,23 @@
       flex-direction: column;
       align-items: flex-start;
       font-size: 16px;
+      color: var(--custom-header-color);
+
   }
+  .publicationItem2 {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+    color: var(--custom-header-color);
+
+}
 
   .publicationTitle {
       font-size: 18px;
+      color: var(--custom-header-color);
+      text-align: left; /* Ensures all lines in a multi-line title align to the left */
+
+
   }
 
   .pdfLink {
@@ -118,7 +147,7 @@
   }
 
   .yearSection, .yearTitle, .typeTitle, .publicationTitle, .publicationDetails {
-      margin: 0.5rem;
+      margin: 1rem;
   }
 
   .yearTitle {
@@ -133,9 +162,15 @@
       margin: 0.5rem;
       font-size: 14px;
   }
+  .publicationItem2 {
+    margin-left: 0.5rem;
+    font-size: 14px;
+}
 
   .publicationTitle {
       font-size: 16px;
+      text-align: left; /* Ensures all lines in a multi-line title align to the left */
+
   }
 
   .pdfLink {
