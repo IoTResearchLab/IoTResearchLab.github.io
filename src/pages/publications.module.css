@@ -19,13 +19,15 @@
 }
 
 .yearSection {
-  margin: 2.5rem;
+  margin: 2rem;
   font-size: 20px;
 }
 
 .yearTitle {
   margin: 2rem;
-  font-size: 30px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  font-size: 35px;
 }
 
 .typeTitle {
