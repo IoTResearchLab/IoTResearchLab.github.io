@@ -6,7 +6,8 @@ const JoinUsForm = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const [pdf, setPdf] = useState(null);
+  const [resume, setResume] = useState(null);
+  const [coverLetter, setCoverLetter] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -16,10 +17,11 @@ const JoinUsForm = () => {
     formData.append('email', email);
     formData.append('subject', subject);
     formData.append('message', message);
-    formData.append('pdf', pdf);
+    formData.append('resume', resume); // Attach resume file
+    formData.append('coverLetter', coverLetter); // Attach cover letter file
 
     try {
-      const response = await fetch('https://iot-backend-server-sparkling-sun-1719.fly.dev/upload-pdf', {
+      const response = await fetch('https://iot-backend-server-sparkling-sun-1719.fly.dev/upload-documents', {
         method: 'POST',
         body: formData,
       });
@@ -31,7 +33,8 @@ const JoinUsForm = () => {
         setEmail('');
         setSubject('');
         setMessage('');
-        setPdf(null);
+        setResume(null);
+        setCoverLetter(null);
       } else {
         alert('Failed to submit form.');
       }
@@ -60,8 +63,12 @@ const JoinUsForm = () => {
         <textarea id="message" name="message" rows="4" cols="50" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea><br/><br/>
       </div>
       <div className="form-group">
-        <label htmlFor="pdf">Upload PDF:</label><br/>
-        <input type="file" id="pdf" name="pdf" accept="application/pdf" onChange={(e) => setPdf(e.target.files[0])} required /><br/><br/>
+        <label htmlFor="resume">Upload Resume (PDF):</label><br/>
+        <input type="file" id="resume" name="resume" accept="application/pdf" onChange={(e) => setResume(e.target.files[0])} required /><br/><br/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="coverLetter">Upload Cover Letter (PDF):</label><br/>
+        <input type="file" id="coverLetter" name="coverLetter" accept="application/pdf, .doc, .docx" onChange={(e) => setCoverLetter(e.target.files[0])} required /><br/><br/>
       </div>
       <div>
         <input type="submit" value="Submit" className="submit-btn"/>
