@@ -6,7 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const FeatureList = [
   {
-    title: <a style={{  color: 'var(--custom-header-color)'}} href="/violent-and-suspicious-events-detection-system">Phone Of Things</a>,
+    title: <a style={{  color: 'var(--custom-header-color)'}} href="/phone-of-things">Phone Of Things</a>,
     imgSrc: '/img/project13.png',
     description: (
       <>
