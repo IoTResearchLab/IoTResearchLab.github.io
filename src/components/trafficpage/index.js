@@ -1,64 +1,46 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+// Static Feature List for Smart Mobility
 const FeatureList = [
   {
-    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Road-Detection-Improvements-Of-Autnomos-Vechiles">Road Detection Improvements Of Autnomos Vechiles</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Road-Detection-Improvements-Of-Autnomos-Vechiles">Road Detection Improvements Of Autnomos Vechiles</a>,
     imgSrc: '/img/project11.gif', // Use relative path here
-    description: (
-      <>
-      </>
-    ),
-    
+    description: <></>,
   },
   {
-    title: 'Smart Intersictions, Making Our Roads Safer',
+    title: 'Smart Intersections, Making Our Roads Safer',
     imgSrc: '/img/project8.jpeg', // Use relative path here
-    description: (
-      <>
-      </>
-    ),
+    description: <></>,
   },
   {
-    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Real-Time-Traffic-Analytics-From-live-Camera-Feeds">Real-Time Traffic Analytics From live Camera Feeds</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Real-Time-Traffic-Analytics-From-live-Camera-Feeds">Real-Time Traffic Analytics From live Camera Feeds</a>,
     imgSrc: '/img/project10.gif', // Use relative path here
-    description: (
-      <>
-      </>
-    ),
+    description: <></>,
   },
   {
-    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Smart-Roads-and-Traffic-Prediction">Smart Roads and Traffic Prediction</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Smart-Roads-and-Traffic-Prediction">Smart Roads and Traffic Prediction</a>,
     imgSrc: '/img/project7.jpeg', // Use relative path here
-    description: (
-      <>
-      </>
-    ),
+    description: <></>,
   },
   {
-    title: <a style={{  color: 'var(--custom-header-color)'}} href="/RegTraffic-A-Regression-based-Traffic-Simulator">RegTraffic: A Regression based Traffic Simulator</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/RegTraffic-A-Regression-based-Traffic-Simulator">RegTraffic: A Regression-based Traffic Simulator</a>,
     imgSrc: '/img/project12.png', // Use relative path here
-    description: (
-      <>
-      </>
-    ),
+    description: <></>,
   },
 ];
 
-function Feature({ Svg, imgSrc, title, description }) {
+// Feature Component
+function Feature({ imgSrc, title, description }) {
   const resolvedImgSrc = useBaseUrl(imgSrc);
 
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        {Svg ? (
-          <Svg className={styles.featureSvg} role="img" />
-        ) : imgSrc ? (
-          <img src={resolvedImgSrc} className={styles.featureImg} alt="Feature image" />
-        ) : null}
+        <img src={resolvedImgSrc} className={styles.featureImg} alt="Feature" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3" className={styles.title}>{title}</Heading>
@@ -68,14 +50,44 @@ function Feature({ Svg, imgSrc, title, description }) {
   );
 }
 
-
 export default function HomepageFeatures() {
+  const [dynamicFeatures, setDynamicFeatures] = useState([]);
+
+  useEffect(() => {
+    // Fetch the projects from the API
+    async function fetchProjects() {
+      try {
+        const response = await fetch('/projects'); // Adjust the endpoint if needed
+        const projects = await response.json();
+
+        // Filter the projects by 'type' field to only include 'smart mobility' projects
+        const smartMobilityProjects = projects.filter(project => project.type === 'smart mobility');
+
+        // Transform the projects to fit the FeatureList structure
+        const dynamicData = smartMobilityProjects.map((project) => ({
+          title: <a style={{ color: 'var(--custom-header-color)' }} href={`/${project.slug}`}>{project.title}</a>,
+          imgSrc: project.imgSrc || '/img/default.jpg', // Use a default image if imgSrc is missing
+          description: <></>, // Add description if needed
+        }));
+
+        setDynamicFeatures(dynamicData);
+      } catch (error) {
+        console.error('Error fetching dynamic features:', error);
+      }
+    }
+
+    fetchProjects();
+  }, []);
+
+  // Combine static and dynamic features
+  const allFeatures = [...FeatureList, ...dynamicFeatures];
+
   return (
     <section className={styles.features}>
       <div className="container">
         <h1 className={styles.text}>Field Projects</h1>
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {allFeatures.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>

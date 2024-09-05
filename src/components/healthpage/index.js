@@ -1,40 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+// Static Feature List
 const FeatureList = [
   {
-    title: <a style={{  color: 'var(--custom-header-color)'}} href="/XBeats-A-Smart-ECG-Monitoring-Platform">XBeats,A Smart ECG Monitoring Platform</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/XBeats-A-Smart-ECG-Monitoring-Platform">XBeats, A Smart ECG Monitoring Platform</a>,
     imgSrc: '/img/project5.gif',
-    description: (
-      <>
-      </>
-    ),
+    description: <></>,
   },
   {
-    title: <a style={{  color: 'var(--custom-header-color)'}} href="/Responding-to-Agitation-Agression-in-Dementia">Responding to Agitation/Agression in Dementia</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Responding-to-Agitation-Agression-in-Dementia">Responding to Agitation/Aggression in Dementia</a>,
     imgSrc: '/img/project9.jpeg',
-    description: (
-      <>
-      </>
-    ),
+    description: <></>,
   },
-  
 ];
 
-function Feature({ Svg, imgSrc, title, description }) {
+// Feature Component
+function Feature({ imgSrc, title, description }) {
   const resolvedImgSrc = useBaseUrl(imgSrc);
 
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        {Svg ? (
-          <Svg className={styles.featureSvg} role="img" />
-        ) : imgSrc ? (
-          <img src={resolvedImgSrc} className={styles.featureImg} alt="Feature image" />
-        ) : null}
+        <img src={resolvedImgSrc} className={styles.featureImg} alt="Feature image" />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
@@ -44,14 +35,45 @@ function Feature({ Svg, imgSrc, title, description }) {
   );
 }
 
-
+// Dynamic Feature Fetching from MongoDB
 export default function HomepageFeatures() {
+  const [dynamicFeatures, setDynamicFeatures] = useState([]);
+
+  useEffect(() => {
+    // Fetch the projects from the API
+    async function fetchProjects() {
+      try {
+        const response = await fetch('https://iot-backend-server-sparkling-sun-1719.fly.dev/projects'); // Use your existing endpoint
+        const projects = await response.json();
+
+        // Filter the projects by 'type' field to only include 'health' projects
+        const healthProjects = projects.filter(project => project.type === 'health');
+
+        // Transform the projects to fit the FeatureList structure
+        const dynamicData = healthProjects.map((project) => ({
+          title: <a style={{ color: 'var(--custom-header-color)' }} href={`/${project.slug}`}>{project.projectName}</a>,
+          imgSrc: project.imgSrc || '/img/default.jpg', // Use a default image if imgSrc is missing
+          description: <></>, // Add description if needed
+        }));
+
+        setDynamicFeatures(dynamicData);
+      } catch (error) {
+        console.error('Error fetching dynamic features:', error);
+      }
+    }
+
+    fetchProjects();
+  }, []);
+
+  // Combine static and dynamic features
+  const allFeatures = [...FeatureList, ...dynamicFeatures];
+
   return (
     <section className={styles.features}>
       <div className="container">
         <h1 className={styles.text}>Field Projects</h1>
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {allFeatures.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>

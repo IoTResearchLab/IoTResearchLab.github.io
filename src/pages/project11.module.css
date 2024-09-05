@@ -1,37 +1,98 @@
-.text {
-    text-align: center;
-    padding: 1rem 0;
-    color: var(--custom-header-color);
-  }
-  
-  .text2 {
-    text-align: center;
-    padding: 1rem 0;
-    color: #626b74;
-  }
-  .text3 {
-    text-align: center;
-    padding: 1rem 0;
-  }
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-container img {
-    max-width: 100%;
-    height: auto;
-  }
-  :root {
-    --custom-header-color: #00427c;
-  }
-  
-  [data-theme='dark'] {
-    --custom-header-color: #ffffff;
+/* Base text styles */
+.text, .text2, .text3 {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--custom-header-color);
+}
+
+.text2 {
+  color: #626b74;
+}
+
+/* Responsive image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Flexbox for aligning images and text */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* Flexbox items */
+.flex-item {
+  flex: 1 1 100%; /* Default to full width for smaller screens */
+  text-align: center;
+  margin: 1rem;
+}
+
+.flex-item img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .text, .text2, .text3 {
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 
-  .imgStyle  {
-    width: 15cm;
-    height: auto
-  };
+  .flex-item {
+    flex: 1 1 100%; /* Full width for mobile */
+  }
+
+  .flex-item img {
+    max-width: 100%;
+  }
+
+  .image-container img {
+    max-width: 100%; /* Ensure images scale to the screen size */
+  }
+}
+
+/* Tablet screens */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .text, .text2, .text3 {
+    font-size: 1.2rem;
+  }
+
+  .flex-item {
+    flex: 1 1 48%; /* Two items per row on tablets */
+  }
+
+  .flex-item img {
+    max-width: 100%;
+  }
+}
+
+/* Desktop screens */
+@media (min-width: 1025px) {
+  .text, .text2, .text3 {
+    font-size: 1.5rem;
+  }
+
+  .flex-item {
+    flex: 1 1 30%; /* Three items per row on desktop */
+  }
+
+  .flex-item img {
+    max-width: 100%;
+  }
+}
