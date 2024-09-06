@@ -31,24 +31,33 @@ const ProjectPage = (props) => {
               <hr style={{ margin: '2rem 0' }} />
             </div>
           ))}
-          {publications.length > 0 && (
-            <div>
-              <h3>Publications</h3>
-              <ul>
-                {publications.map((publication, index) => (
-                  <li key={index}>
-                    <a href={publication.url} target="_blank" rel="noopener noreferrer">
-                      {publication.title}
-                    </a>
-                    <br/>
-                    <span className="pub1">{publication.authors}</span>
-                    <br/>
-                    <span className="publ">{publication.date}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+{Array.isArray(publications) && publications.length > 0 && (
+  <div>
+    <h3>Publications</h3>
+    <ul>
+      {publications
+        // Filter out publications where all fields are empty
+        .filter(publication => publication.title || publication.url || publication.authors || publication.date)
+        .map((publication, index) => (
+          <li key={index}>
+            {publication.url ? (
+              <a href={publication.url} target="_blank" rel="noopener noreferrer">
+                {publication.title || "Untitled"}
+              </a>
+            ) : (
+              <span>{publication.title || "Untitled"}</span>
+            )}
+            <br />
+            <span className="pub1">{publication.authors || "Unknown authors"}</span>
+            <br />
+            <span className="publ">{publication.date || "Unknown date"}</span>
+          </li>
+        ))}
+    </ul>
+  </div>
+)}
+
+
         </div>
       </Layout>
     </main>
