@@ -30,6 +30,7 @@ const Publications = () => {
     };
 
     fetchPublications();
+    
   }, []);
 
   if (loading) {
@@ -70,8 +71,9 @@ const Publications = () => {
                     <a href={pub.url} target="_blank" rel="noopener noreferrer" className={styles.publicationTitle}>
                       {pub.title}
                     </a>
-                    <p className={styles.publicationItem}>Authors: {pub.authors}.</p>
-                    <p className={styles.publicationItem2}>{pub.publisher}</p>
+                    <div className={styles.publicationItem}>Authors: {pub.authors}.</div>
+                    <div className={styles.publicationItem2}>{pub.publisher}</div>
+
                   </div>
                 </div>
               ))}
