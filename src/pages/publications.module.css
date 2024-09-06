@@ -1,3 +1,4 @@
+
 .pdfIcon {
   float: right;
   width: 100px;
@@ -16,6 +17,7 @@
 .container {
   color: var(--custom-header-color);
   font-size: 18px; /* Base font size */
+  margin-left: 3rem;
 }
 
 .yearSection {
