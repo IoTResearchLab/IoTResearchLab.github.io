@@ -1,16 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '@theme/Layout';
 import './ProjectPage.css'; 
 
-const ProjectPage = (props) => {
-  const { customData } = props;
+const backendServerUri = 'https://iot-backend-server-sparkling-sun-1719.fly.dev/projects';
 
-  console.log('customData:', customData);
-  if (!customData) {
+const ProjectPage = (props) => {
+  const { customData, match } = props;
+  const [pageData, setPageData] = useState(customData || null); // Start with customData if available
+  const [loading, setLoading] = useState(!customData); // Set loading state only if customData isn't provided
+
+  const slug = match?.params?.slug; // Get the slug from the route params if available
+
+  useEffect(() => {
+    if (!customData && slug) { // Fetch data only if it's not provided as props
+      const fetchData = async () => {
+        try {
+          const response = await fetch(`${backendServerUri}/${slug}`);
+          const data = await response.json();
+          setPageData(data);
+        } catch (error) {
+          console.error('Error fetching project data:', error);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchData();
+    }
+  }, [slug, customData]);
+
+  if (loading) {
     return <div>Loading...</div>;
   }
 
-  const { title, subtitle, introduction, paragraphs, publications } = customData;
+  if (!pageData) {
+    return <div>No data found for this project.</div>;
+  }
+
+  const { title, subtitle, introduction, paragraphs, publications } = pageData;
 
   return (
     <main>
@@ -31,33 +57,31 @@ const ProjectPage = (props) => {
               <hr style={{ margin: '2rem 0' }} />
             </div>
           ))}
-{Array.isArray(publications) && publications.length > 0 && (
-  <div>
-    <h3>Publications</h3>
-    <ul>
-      {publications
-        // Filter out publications where all fields are empty
-        .filter(publication => publication.title || publication.url || publication.authors || publication.date)
-        .map((publication, index) => (
-          <li key={index}>
-            {publication.url ? (
-              <a href={publication.url} target="_blank" rel="noopener noreferrer">
-                {publication.title || "Untitled"}
-              </a>
-            ) : (
-              <span>{publication.title || "Untitled"}</span>
-            )}
-            <br />
-            <span className="pub1">{publication.authors || "Unknown authors"}</span>
-            <br />
-            <span className="publ">{publication.date || "Unknown date"}</span>
-          </li>
-        ))}
-    </ul>
-  </div>
-)}
 
-
+          {Array.isArray(publications) && publications.length > 0 && (
+            <div>
+              <h3>Publications</h3>
+              <ul>
+                {publications
+                  .filter(publication => publication.title || publication.url || publication.authors || publication.date)
+                  .map((publication, index) => (
+                    <li key={index}>
+                      {publication.url ? (
+                        <a href={publication.url} target="_blank" rel="noopener noreferrer">
+                          {publication.title || "Untitled"}
+                        </a>
+                      ) : (
+                        <span>{publication.title || "Untitled"}</span>
+                      )}
+                      <br />
+                      <span className="pub1">{publication.authors || "Unknown authors"}</span>
+                      <br />
+                      <span className="publ">{publication.date || "Unknown date"}</span>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          )}
         </div>
       </Layout>
     </main>
