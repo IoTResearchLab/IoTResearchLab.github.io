@@ -8,9 +8,13 @@ const JoinUsForm = () => {
   const [message, setMessage] = useState('');
   const [resume, setResume] = useState(null);
   const [coverLetter, setCoverLetter] = useState(null);
+  const [loading, setLoading] = useState(false); // New loading state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Prevent multiple submissions
+    setLoading(true);
 
     const formData = new FormData();
     formData.append('name', name);
@@ -41,6 +45,8 @@ const JoinUsForm = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('An error occurred while submitting the form.');
+    } finally {
+      setLoading(false); // End the loading state after submission
     }
   };
 
@@ -48,30 +54,30 @@ const JoinUsForm = () => {
     <form onSubmit={handleSubmit} className="join-us-form">
       <div className="form-group">
         <label htmlFor="name">Name:</label><br/>
-        <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required /><br/><br/>
+        <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required disabled={loading} /><br/><br/>
       </div>
       <div className="form-group">
         <label htmlFor="email">Email:</label><br/>
-        <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required /><br/><br/>
+        <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required disabled={loading} /><br/><br/>
       </div>
       <div className="form-group">
         <label htmlFor="subject">Subject:</label><br/>
-        <input type="text" id="subject" name="subject" value={subject} onChange={(e) => setSubject(e.target.value)} required /><br/><br/>
+        <input type="text" id="subject" name="subject" value={subject} onChange={(e) => setSubject(e.target.value)} required disabled={loading} /><br/><br/>
       </div>
       <div className="form-group">
         <label htmlFor="message">Message:</label><br/>
-        <textarea id="message" name="message" rows="4" cols="50" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea><br/><br/>
+        <textarea id="message" name="message" rows="4" cols="50" value={message} onChange={(e) => setMessage(e.target.value)} required disabled={loading}></textarea><br/><br/>
       </div>
       <div className="form-group">
         <label htmlFor="resume">Upload Resume (PDF):</label><br/>
-        <input type="file" id="resume" name="resume" accept="application/pdf" onChange={(e) => setResume(e.target.files[0])} required /><br/><br/>
+        <input type="file" id="resume" name="resume" accept="application/pdf" onChange={(e) => setResume(e.target.files[0])} required disabled={loading} /><br/><br/>
       </div>
       <div className="form-group">
         <label htmlFor="coverLetter">Upload Cover Letter (PDF):</label><br/>
-        <input type="file" id="coverLetter" name="coverLetter" accept="application/pdf, .doc, .docx" onChange={(e) => setCoverLetter(e.target.files[0])} required /><br/><br/>
+        <input type="file" id="coverLetter" name="coverLetter" accept="application/pdf, .doc, .docx" onChange={(e) => setCoverLetter(e.target.files[0])} required disabled={loading} /><br/><br/>
       </div>
       <div>
-        <input type="submit" value="Submit" className="submit-btn"/>
+        <input type="submit" value={loading ? "Submitting..." : "Submit"} className="submit-btn" disabled={loading}/>
       </div>
     </form>
   );

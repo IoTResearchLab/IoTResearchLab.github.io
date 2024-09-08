@@ -55,15 +55,7 @@
   .submit-btn:hover {
     background-color: var(--button-hover-background-color);
   }
-  .join-us-form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
+ 
   
   .form-group {
     margin-bottom: 15px;
@@ -91,14 +83,15 @@
   }
   
   input[type="submit"].submit-btn {
-    background-color: #00427c;
+    color: var(--button-text-color);
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     width: 100%;
     margin-top: 10px;
+    font-size: inherit;
   }
   
   input[type="submit"].submit-btn:hover {
