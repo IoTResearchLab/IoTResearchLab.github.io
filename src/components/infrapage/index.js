@@ -6,21 +6,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // Static Feature List
 const FeatureList = [
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/phone-of-things">Phone Of Things</a>,
-    imgSrc: '/img/project13.png',
-    description: <></>,
-  },
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Violent-and-Suspicious-Events-Detection-System">Violent and Suspicious Events Detection System</a>,
-    imgSrc: '/img/project14.gif',
-    description: <></>,
-  },
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/protecting-user-privacy-in-the-connected-world">Protecting User Privacy in the Connected world</a>,
-    imgSrc: '/img/project2.jpeg',
-    description: <></>,
-  },
+ 
   {
     title: '[ARC] Building IoT infrastructure',
     imgSrc: '/img/project1.png',
@@ -31,16 +17,8 @@ const FeatureList = [
     imgSrc: '/img/project3.jpeg',
     description: <></>,
   },
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/On-Demand-Sensing-For-Smart-City-Services">On-Demand Sensing For Smart City Services</a>,
-    imgSrc: '/img/project4.jpeg',
-    description: <></>,
-  },
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/farming-like-never-yield-estimation-and-visualization-for-precision-agriculture">Farming Like Never: Yield Estimation and Visualization for Precision Agriculture</a>,
-    imgSrc: '/img/project6.gif',
-    description: <></>,
-  },
+ 
+ 
 ];
 
 // Feature Component
@@ -67,15 +45,15 @@ export default function HomepageFeatures() {
     // Fetch the projects from the API
     async function fetchProjects() {
       try {
-        const response = await fetch('/projects'); // Adjust the endpoint if needed
+        const response = await fetch('https://iot-backend-server-sparkling-sun-1719.fly.dev/projects'); // Adjust the endpoint if needed
         const projects = await response.json();
 
         // Filter the projects by 'type' field to only include 'infrastructure' projects
-        const infrastructureProjects = projects.filter(project => project.type === 'Infrastructure');
+        const infrastructureProjects = projects.filter(project => project.type === 'infrastructure');
 
         // Transform the projects to fit the FeatureList structure
         const dynamicData = infrastructureProjects.map((project) => ({
-          title: <a style={{ color: 'var(--custom-header-color)' }} href={`/${project.slug}`}>{project.title}</a>,
+          title: <a style={{ color: 'var(--custom-header-color)' }} href={`/${project.slug}`}>{project.projectName}</a>,
           imgSrc: project.imgSrc || '/img/default.jpg', // Use a default image if imgSrc is missing
           description: <></>, // Add description if needed
         }));

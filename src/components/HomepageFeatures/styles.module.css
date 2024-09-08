@@ -3,34 +3,30 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
 }
-.text {
+
+.text, .text2 {
   text-align: center;
   padding: 2rem 0;
   color: var(--custom-header-color);
- 
 }
+
 .text2 {
-  text-align: center;
-  padding: 2rem 0;
-  color: var(--custom-header-color);
   margin-bottom: 60px;
 }
 
-
-/* styles.module.css */
-/* styles.module.css */
 .featureImg {
   padding: 2rem 0;
-  width: 350px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
-  border-radius: 50% / 100%; /* Create a horizontal oval */
-  object-fit: cover; /* Ensure the image covers the container */
+  width: 350px;
+  height: 300px;
+  border-radius: 50% / 100%;
+  object-fit: cover;
 }
 
 .customButton {
@@ -71,24 +67,18 @@
   flex-wrap: wrap;
 }
 
-.left {
+.left, .right {
   flex: 1;
   text-align: center;
 }
 
-.right {
-  flex: 1;
-  text-align: center;
-}
-
-.buildingImage {
+.buildingImage, .logo {
   width: 100%;
   height: auto;
 }
 
 .logo {
   width: 300px;
-  height: auto;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
@@ -97,7 +87,7 @@
   background-color: #00427c;
   color: white;
   font-size: 1.2em; /* Smaller font size */
-  padding: 12px 40px; /* Adjusted padding */
+  padding: 15px 50px; /* Adjusted padding */
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -106,19 +96,104 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none;
-  margin: 50px 0; /* Adding white space above and below */
+  margin: 50px 0;
 }
 
 .customButton2:hover {
   background-color: #ffffff;
   transform: translateY(-2px);
 }
+
 :root {
   --custom-header-color: #00427c;
- 
 }
 
 [data-theme='dark'] {
   --custom-header-color: #ffffff;
+}
 
+/* Media Queries */
+@media (max-width: 1200px) {
+  .featureImg {
+    width: 300px;
+    height: 250px;
+  }
+  .customButton {
+    font-size: 1.4em;
+    padding: 20px 60px;
+  }
+  .customButton2 {
+    font-size: 1.4em;
+    padding: 20px 60px;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+  .featureImg {
+    width: 250px;
+    height: 200px;
+  }
+  .customButton {
+    font-size: 1.2em;
+    padding: 15px 40px;
+  }
+  .customButton2 {
+    font-size: 1.2em;
+    padding: 15px 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featureImg {
+    width: 200px;
+    height: 180px;
+  }
+  .customButton {
+    font-size: 1em;
+    padding: 12px 30px;
+  }
+    .customButton2 {
+    font-size: 1em;
+    padding: 12px 30px;
+    margin :0%;
+  }
+  .sectionTitle {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 1200px) {
+  .buildingImage {
+    width: 300px; /* Reduce image size */
+  }
+  .logo {
+    width: 250px; /* Reduce logo size */
+  }
+}
+
+@media (max-width: 768px) {
+  .buildingSection {
+    flex-direction: column; /* Stack images vertically */
+  }
+  .buildingImage {
+    width: 250px;
+  }
+  .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text2 {
+    font-size: 1.5rem;
+  }
+  .buildingImage {
+    width: 200px;
+  }
+  .logo {
+    width: 150px;
+  }
 }

@@ -26,11 +26,7 @@ const FeatureList = [
     imgSrc: '/img/project7.jpeg', // Use relative path here
     description: <></>,
   },
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/RegTraffic-A-Regression-based-Traffic-Simulator">RegTraffic: A Regression-based Traffic Simulator</a>,
-    imgSrc: '/img/project12.png', // Use relative path here
-    description: <></>,
-  },
+
 ];
 
 // Feature Component
@@ -57,7 +53,7 @@ export default function HomepageFeatures() {
     // Fetch the projects from the API
     async function fetchProjects() {
       try {
-        const response = await fetch('/projects'); // Adjust the endpoint if needed
+        const response = await fetch('https://iot-backend-server-sparkling-sun-1719.fly.dev/projects'); // Adjust the endpoint if needed
         const projects = await response.json();
 
         // Filter the projects by 'type' field to only include 'smart mobility' projects
@@ -65,7 +61,7 @@ export default function HomepageFeatures() {
 
         // Transform the projects to fit the FeatureList structure
         const dynamicData = smartMobilityProjects.map((project) => ({
-          title: <a style={{ color: 'var(--custom-header-color)' }} href={`/${project.slug}`}>{project.title}</a>,
+          title: <a style={{ color: 'var(--custom-header-color)' }} href={`/${project.slug}`}>{project.projectName}</a>,
           imgSrc: project.imgSrc || '/img/default.jpg', // Use a default image if imgSrc is missing
           description: <></>, // Add description if needed
         }));
