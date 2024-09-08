@@ -58,30 +58,32 @@ const ProjectPage = (props) => {
             </div>
           ))}
 
-          {Array.isArray(publications) && publications.length > 0 && (
-            <div>
-              <h3>Publications</h3>
-              <ul>
-                {publications
-                  .filter(publication => publication.title || publication.url || publication.authors || publication.date)
-                  .map((publication, index) => (
-                    <li key={index}>
-                      {publication.url ? (
-                        <a href={publication.url} target="_blank" rel="noopener noreferrer">
-                          {publication.title || "Untitled"}
-                        </a>
-                      ) : (
-                        <span>{publication.title || "Untitled"}</span>
-                      )}
-                      <br />
-                      <span className="pub1">{publication.authors }</span>
-                      <br />
-                      <span className="publ">{publication.date }</span>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          )}
+{Array.isArray(publications) && publications.length > 0 && 
+  publications.some(publication => publication.title || publication.url || publication.authors || publication.date) && (
+    <div>
+      <h3>Publications</h3>
+      <ul>
+        {publications
+          .filter(publication => publication.title || publication.url || publication.authors || publication.date)
+          .map((publication, index) => (
+            <li key={index}>
+              {publication.url ? (
+                <a href={publication.url} target="_blank" rel="noopener noreferrer">
+                  {publication.title || "Untitled"}
+                </a>
+              ) : (
+                <div className='publicationtit'>{publication.title || "Untitled"}</div>
+              )}
+              <br />
+              <span className="pub1">{publication.authors }</span>
+              <br />
+              <span className="publ">{publication.date }</span>
+            </li>
+          ))}
+      </ul>
+    </div>
+)}
+
         </div>
       </Layout>
     </main>
