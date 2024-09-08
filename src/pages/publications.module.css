@@ -1,4 +1,3 @@
-
 .pdfIcon {
   float: right;
   width: 100px;
@@ -17,7 +16,8 @@
 .container {
   color: var(--custom-header-color);
   font-size: 18px; /* Base font size */
-  margin-left: 3rem;
+  margin-left: 3rem; /* Adjust this for large screens */
+  padding: 1rem;
 }
 
 .yearSection {
@@ -38,24 +38,22 @@
   font-size: 22px;
 }
 
-
 .publicationItem2 {
   display: flex;
   align-items: center;
   font-size: 18px;
   margin-left: 0rem;
-
 }
 
 .publicationInfo {
   flex: 9;
-
 }
+
 .publicationItem {
   display: flex;
-  align-items: flex-start; /* Ensures all content is aligned from the start */
+  align-items: flex-start;
   font-size: 18px;
-  flex-wrap: wrap; /* Allows the content to wrap if needed */
+  flex-wrap: wrap;
 }
 
 .publicationTitle {
@@ -63,12 +61,11 @@
   color: var(--custom-header-color);
   font-weight: bold;
   text-align: left;
-  margin: 0; /* Remove margin to prevent shifting */
-  padding: 0.5rem 0; /* Optional: Adds space around the title */
-  word-wrap: break-word; /* Ensures long words break if needed */
-  width: 100%; /* Ensures the title takes up the full width */
+  margin: 0;
+  padding: 0.5rem 0;
+  word-wrap: break-word;
+  width: 100%;
 }
-
 
 .publicationDetails {
   margin: 1rem;
@@ -87,98 +84,116 @@
 /* For screens smaller than 768px (tablets and smaller) */
 @media (max-width: 768px) {
   .container {
-      font-size: 16px;
+    font-size: 16px;
+    margin-left: 0; /* Remove left margin for smaller screens */
+    padding: 1rem;
   }
 
   .pdfIcon {
-      width: 80px;
-      margin: 5px;
+    width: 80px;
+    margin: 5px;
   }
 
   .yearSection, .yearTitle, .typeTitle, .publicationTitle, .publicationDetails {
-      margin: 1rem;
+    margin-left: 0; /* Ensure no left margin */
+    padding-left: 0; /* Remove padding for smaller screens */
+    text-align: left; /* Align all text to the left */
   }
 
   .yearTitle {
-      font-size: 22px;
-      
+    font-size: 22px;
   }
 
   .typeTitle {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .publicationItem {
-      flex-direction: column;
-      align-items: flex-start;
-      font-size: 16px;
-      color: var(--custom-header-color);
-
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 16px;
+    color: var(--custom-header-color);
+    margin-left: 0; /* Ensure no left margin */
   }
+
   .publicationItem2 {
     flex-direction: column;
     align-items: flex-start;
     font-size: 16px;
     color: var(--custom-header-color);
-
-}
+    margin-left: 0; /* Ensure no left margin */
+  }
 
   .publicationTitle {
-      font-size: 18px;
-      color: var(--custom-header-color);
-      text-align: left; /* Ensures all lines in a multi-line title align to the left */
-
-
+    font-size: 18px;
+    color: var(--custom-header-color);
+    text-align: left;
+    margin-left: 0; /* Ensure no left margin */
   }
 
   .pdfLink {
-      flex: none;
-      text-align: left;
-      margin-top: 1rem;
-      font-size: 14px;
+    flex: none;
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 14px;
   }
 }
 
 /* For screens smaller than 480px (mobile phones) */
 @media (max-width: 480px) {
   .container {
-      font-size: 14px;
+    font-size: 14px;
+    margin-left: 0; /* Ensure no left margin */
+    padding-left: 0.5rem;
   }
 
   .pdfIcon {
-      width: 60px;
-      margin: 3px;
+    width: 60px;
+    margin: 3px;
   }
 
-  .yearSection, .yearTitle, .typeTitle,  .publicationDetails {
-      margin: 1rem;
+  .yearSection, .yearTitle, .typeTitle, .publicationDetails {
+    margin-left: 0;
+    padding-left: 0; /* Ensure everything aligns to the left */
+    text-align: left;
   }
- 
+
   .yearTitle {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .typeTitle {
-      font-size: 18px;
+    font-size: 18px;
   }
 
   .publicationItem {
-      font-size: 14px;
+    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
   }
+
   .publicationItem2 {
     font-size: 14px;
-}
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left;
+  }
 
   .publicationTitle {
-      font-size: 16px;
-      text-align: left; /* Ensures all lines in a multi-line title align to the left */
-      margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .pdfLink {
-      text-align: left;
-      margin-top: 0.5rem;
-      font-size: 12px;
+    text-align: left;
+    margin-top: 0.5rem;
+    font-size: 12px;
   }
 }

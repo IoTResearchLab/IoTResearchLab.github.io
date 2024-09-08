@@ -73,7 +73,6 @@ const Publications = () => {
                     </a>
                     <div className={styles.publicationItem}>Authors: {pub.authors}.</div>
                     <div className={styles.publicationItem2}>{pub.publisher}</div>
-
                   </div>
                 </div>
               ))}
