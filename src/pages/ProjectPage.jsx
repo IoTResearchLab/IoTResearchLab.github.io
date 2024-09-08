@@ -47,7 +47,7 @@ const ProjectPage = (props) => {
           <p>{introduction}</p>
           <hr style={{ margin: '2rem 0' }} />
 
-          {paragraphs.map((paragraph, index) => (
+          {Array.isArray(paragraphs) && paragraphs.map((paragraph, index) => (
             <div key={index}>
               {paragraph.title && <h3>{paragraph.title}</h3>}
               <div className="paragraph-container">
@@ -74,9 +74,9 @@ const ProjectPage = (props) => {
                         <span>{publication.title || "Untitled"}</span>
                       )}
                       <br />
-                      <span className="pub1">{publication.authors || "Unknown authors"}</span>
+                      <span className="pub1">{publication.authors }</span>
                       <br />
-                      <span className="publ">{publication.date || "Unknown date"}</span>
+                      <span className="publ">{publication.date }</span>
                     </li>
                   ))}
               </ul>
