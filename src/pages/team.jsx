@@ -18,6 +18,7 @@ const Team = () => {
         }
         const data = await response.json();
 
+        // Group team members by type, defaulting to 'No Type' for empty types
         const classifiedTeam = data.reduce((acc, member) => {
           const { type = 'No Type' } = member;
           if (!acc[type]) acc[type] = [];
@@ -50,11 +51,11 @@ const Team = () => {
     return <div>No team members found.</div>;
   }
 
-  // Sort the keys so 'No Type' appears first
+  // Sort the keys so empty strings and 'No Type' appear first
   const sortedKeys = Object.keys(team).sort((a, b) => {
-    if (a === 'No Type') return -1;
-    if (b === 'No Type') return 1;
-    return 0;
+    if (a === 'No Type' || a === '') return -1;
+    if (b === 'No Type' || b === '') return 1;
+    return a.localeCompare(b); // Sort alphabetically for other types
   });
 
   return (
