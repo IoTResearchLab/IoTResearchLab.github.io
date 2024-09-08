@@ -3,11 +3,12 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { RingLoader } from 'react-spinners'; // Import the loader
 
 // Static Feature List for Smart Mobility
 const FeatureList = [
   {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Road-Detection-Improvements-Of-Autnomos-Vechiles">Road Detection Improvements Of Autnomos Vechiles</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Road-Detection-Improvements-Of-Autnomos-Vechiles">Road Detection Improvements Of Autonomous Vehicles</a>,
     imgSrc: '/img/project11.gif', // Use relative path here
     description: <></>,
   },
@@ -17,7 +18,7 @@ const FeatureList = [
     description: <></>,
   },
   {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Real-Time-Traffic-Analytics-From-live-Camera-Feeds">Real-Time Traffic Analytics From live Camera Feeds</a>,
+    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Real-Time-Traffic-Analytics-From-live-Camera-Feeds">Real-Time Traffic Analytics From Live Camera Feeds</a>,
     imgSrc: '/img/project10.gif', // Use relative path here
     description: <></>,
   },
@@ -26,7 +27,6 @@ const FeatureList = [
     imgSrc: '/img/project7.jpeg', // Use relative path here
     description: <></>,
   },
-
 ];
 
 // Feature Component
@@ -48,6 +48,7 @@ function Feature({ imgSrc, title, description }) {
 
 export default function HomepageFeatures() {
   const [dynamicFeatures, setDynamicFeatures] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     // Fetch the projects from the API
@@ -69,6 +70,8 @@ export default function HomepageFeatures() {
         setDynamicFeatures(dynamicData);
       } catch (error) {
         console.error('Error fetching dynamic features:', error);
+      } finally {
+        setLoading(false); // Stop loading when the fetch completes
       }
     }
 
@@ -82,11 +85,17 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <h1 className={styles.text}>Field Projects</h1>
-        <div className="row">
-          {allFeatures.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+        {loading ? ( // Conditional rendering based on loading state
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <RingLoader color="#00427c" size={150} loading={loading} />
+          </div>
+        ) : (
+          <div className="row">
+            {allFeatures.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

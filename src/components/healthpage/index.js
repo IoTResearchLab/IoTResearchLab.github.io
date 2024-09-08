@@ -3,6 +3,8 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import { RingLoader } from 'react-spinners';
+
 
 // Static Feature List
 const FeatureList = [
@@ -38,6 +40,7 @@ function Feature({ imgSrc, title, description }) {
 // Dynamic Feature Fetching from MongoDB
 export default function HomepageFeatures() {
   const [dynamicFeatures, setDynamicFeatures] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   useEffect(() => {
     // Fetch the projects from the API
@@ -59,6 +62,8 @@ export default function HomepageFeatures() {
         setDynamicFeatures(dynamicData);
       } catch (error) {
         console.error('Error fetching dynamic features:', error);
+      } finally {
+        setLoading(false); // Stop loading when the fetch is complete
       }
     }
 
@@ -72,11 +77,17 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <h1 className={styles.text}>Field Projects</h1>
-        <div className="row">
-          {allFeatures.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+        {loading ? ( // Conditional rendering based on loading state
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+         <RingLoader color="#00427c" size={150} loading={loading} />
+       </div>
+        ) : (
+          <div className="row">
+            {allFeatures.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
