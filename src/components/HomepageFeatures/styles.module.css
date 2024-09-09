@@ -134,8 +134,8 @@
     flex-direction: column;
   }
   .featureImg {
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 250px;
   }
   .customButton {
     font-size: 1.2em;
@@ -149,8 +149,8 @@
 
 @media (max-width: 480px) {
   .featureImg {
-    width: 200px;
-    height: 180px;
+    width: 280px;
+    height: 220px;
   }
   .customButton {
     font-size: 1em;

@@ -53,3 +53,32 @@
   background: rgba(14, 45, 67, 0.5); /* Adjust the opacity as needed */
   z-index:-1 /* Ensure the overlay is behind the text */
 }
+
+.customheader {
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold; 
+  color: white; /* Adjust based on your theme */
+  text-align: center; 
+ 
+}
+
+@media (max-width: 768px) {
+  .customheader {
+    font-size: 2rem; /* Responsive size for smaller screens */
+  }
+}
+.customTagline {
+  font-size: 1.5rem; /* Adjust as needed */
+  color: #ffffff; /* Adjust based on your background */
+  text-align: center; /* Center the tagline */
+  margin-bottom: 1rem; /* Space between tagline and other elements */
+
+}
+
+@media (max-width: 768px) {
+  .customTagline {
+    font-size: 1rem; /* Responsive size for smaller screens */
+    margin-bottom: 0.5rem; /* Space between tagline and other elements */
+
+  }
+}
