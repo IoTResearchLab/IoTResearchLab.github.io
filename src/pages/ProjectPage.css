@@ -58,12 +58,12 @@
   font-weight: bold !important;
   line-height: 1.6 !important;
   padding: 1rem 0 !important;
+  text-align: start !important;
+
 }
 .publicationtit {
   font-size: 1.25rem !important;
   font-weight: bold !important;
-  line-height: 1.6 !important;
-  padding: 1rem 0 !important;
   color: var(--custom-header-color) !important;
   text-align: start !important;
 }

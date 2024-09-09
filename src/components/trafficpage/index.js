@@ -7,21 +7,13 @@ import { RingLoader } from 'react-spinners'; // Import the loader
 
 // Static Feature List for Smart Mobility
 const FeatureList = [
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Road-Detection-Improvements-Of-Autnomos-Vechiles">Road Detection Improvements Of Autonomous Vehicles</a>,
-    imgSrc: '/img/project11.gif', // Use relative path here
-    description: <></>,
-  },
+ 
   {
     title: 'Smart Intersections, Making Our Roads Safer',
     imgSrc: '/img/project8.jpeg', // Use relative path here
     description: <></>,
   },
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Real-Time-Traffic-Analytics-From-live-Camera-Feeds">Real-Time Traffic Analytics From Live Camera Feeds</a>,
-    imgSrc: '/img/project10.gif', // Use relative path here
-    description: <></>,
-  },
+ 
   {
     title: <a style={{ color: 'var(--custom-header-color)' }} href="/Smart-Roads-and-Traffic-Prediction">Smart Roads and Traffic Prediction</a>,
     imgSrc: '/img/project7.jpeg', // Use relative path here

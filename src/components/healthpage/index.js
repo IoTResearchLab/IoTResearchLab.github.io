@@ -8,16 +8,8 @@ import { RingLoader } from 'react-spinners';
 
 // Static Feature List
 const FeatureList = [
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/XBeats-A-Smart-ECG-Monitoring-Platform">XBeats, A Smart ECG Monitoring Platform</a>,
-    imgSrc: '/img/project5.gif',
-    description: <></>,
-  },
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Responding-to-Agitation-Agression-in-Dementia">Responding to Agitation/Aggression in Dementia</a>,
-    imgSrc: '/img/project9.jpeg',
-    description: <></>,
-  },
+  
+ 
 ];
 
 // Feature Component
