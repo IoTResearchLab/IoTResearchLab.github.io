@@ -13,11 +13,12 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title">
+      <div className={clsx('customheader', styles.customheader)}>
         
           {customFields.trafficTitle}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        </div>
+        <div className={clsx('customTagline', styles.customTagline)}>
+        {siteConfig.tagline}</div>
       
       </div>
     </header>

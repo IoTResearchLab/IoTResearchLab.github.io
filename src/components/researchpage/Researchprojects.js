@@ -14,14 +14,14 @@ import { RingLoader } from 'react-spinners'; // Import the spinner
 
 // Static project list
 const staticProjects = [
-  { title: 'Road Detection Improvements Of Autonomous Vehicles', description: '', image: project11, link: '/Road-Detection-Improvements-Of-Autnomos-Vechiles' },
+  // { title: 'Road Detection Improvements Of Autonomous Vehicles', description: '', image: project11, link: '/Road-Detection-Improvements-Of-Autnomos-Vechiles' },
   { title: 'Smart Intersections, Making Our Roads Safer', description: '', image: project8, link: '' },
-  { title: 'Real-Time Traffic Analytics From Live Camera Feeds', description: '', image: project10, link: '/Real-Time-Traffic-Analytics-From-live-Camera-Feeds' },
+  // { title: 'Real-Time Traffic Analytics From Live Camera Feeds', description: '', image: project10, link: '/Real-Time-Traffic-Analytics-From-live-Camera-Feeds' },
   { title: '[ARC] Building IoT infrastructure', description: '', image: project1, link: '' },
   { title: '[ARC] Dynamic Access Control in IoT Scenarios', description: '', image: project3, link: '' },
-  { title: 'XBeats, A Smart ECG Monitoring Platform', description: '', image: project5, link: '/XBeats-A-Smart-ECG-Monitoring-Platform' },
+  // { title: 'XBeats, A Smart ECG Monitoring Platform', description: '', image: project5, link: '/XBeats-A-Smart-ECG-Monitoring-Platform' },
   { title: 'Smart Roads and Traffic Prediction', description: '', image: project7, link: '/Smart-Roads-and-Traffic-Prediction' },
-  { title: 'Responding to Agitation/Aggression in Dementia', description: '', image: project9, link: '/Responding-to-Agitation-Agression-in-Dementia' },
+  // { title: 'Responding to Agitation/Aggression in Dementia', description: '', image: project9, link: '/Responding-to-Agitation-Agression-in-Dementia' },
 ];
 
 const ResearchProjects = () => {

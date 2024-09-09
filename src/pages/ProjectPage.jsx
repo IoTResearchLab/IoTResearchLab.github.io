@@ -68,13 +68,13 @@ const ProjectPage = (props) => {
           .map((publication, index) => (
             <li key={index}>
               {publication.url ? (
+                <div>
                 <a href={publication.url} target="_blank" rel="noopener noreferrer">
                   {publication.title || "Untitled"}
-                </a>
+                </a></div>
               ) : (
                 <div className='publicationtit'>{publication.title || "Untitled"}</div>
               )}
-              <br />
               <span className="pub1">{publication.authors }</span>
               <br />
               <span className="publ">{publication.date }</span>

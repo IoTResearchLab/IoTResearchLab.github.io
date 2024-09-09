@@ -94,6 +94,9 @@ const config = {
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
+        srcDark:'img/darklogo.png',
+        width:50,
+        height:70,
       },
       items: [
         { to: '/traffic', label: 'IoT in Smart Mobility', position: 'left' },

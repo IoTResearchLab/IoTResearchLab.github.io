@@ -24,10 +24,42 @@
 
 /* Hero Banner Titles */
 .hero__title {
-  font-size: clamp(2rem, 5vw, 4rem); /* Dynamically scale the font size */
-  margin: 0;
-  line-height: 1.2;
+  font-size: 5rem;
+   /* Dynamically scale the font size */
+  font-weight: bold;
 }
+/* index.module.css */
+.customheader {
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold; 
+  color: white; /* Adjust based on your theme */
+  text-align: center; 
+ 
+}
+
+@media (max-width: 768px) {
+  .customheader {
+    font-size: 2rem; /* Responsive size for smaller screens */
+  }
+}
+.customTagline {
+  font-size: 1.5rem; /* Adjust as needed */
+  color: #ffffff; /* Adjust based on your background */
+  text-align: center; /* Center the tagline */
+  margin-bottom: 1rem; /* Space between tagline and other elements */
+
+}
+
+@media (max-width: 768px) {
+  .customTagline {
+    font-size: 1rem; /* Responsive size for smaller screens */
+    margin-bottom: 0.5rem; /* Space between tagline and other elements */
+
+  }
+}
+
+
+
 
 .hero__subtitle {
   font-size: clamp(1rem, 3vw, 1.8rem); /* Dynamically scale the subtitle */
@@ -59,6 +91,7 @@
 /* Optional: Add a solid overlay for better text visibility */
 .heroBanner::before {
   content: '';
+
   position: absolute;
   top: 0;
   left: 0;
