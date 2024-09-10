@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './team.module.css';
 import Layout from '@theme/Layout';
-import Loading from './Loading';
 import { RingLoader } from 'react-spinners';
 
 const Team = () => {
@@ -38,9 +37,11 @@ const Team = () => {
   }, []);
 
   if (loading) {
-    return   <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-    <RingLoader color="#00427c" size={150} loading={loading} />
-  </div>;
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <RingLoader color="#00427c" size={150} loading={loading} />
+      </div>
+    );
   }
 
   if (error) {
@@ -72,7 +73,15 @@ const Team = () => {
                     <img src={member.image} alt={member.name} className={styles.teamImage} />
                   </div>
                   <div className={styles.infoContainer}>
-                    <div className={styles.customName}>{member.name}</div>
+                    <div className={styles.customName}>
+                      {member.personalLink ? (
+                        <a href={member.personalLink} target="_blank" rel="noopener noreferrer" className={styles.customName}>
+                          {member.name}
+                        </a>
+                      ) : (
+                        member.name
+                      )}
+                    </div>
                     <div className={styles.customPosition}>{member.position}</div>
                   </div>
                 </div>

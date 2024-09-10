@@ -59,6 +59,8 @@
   line-height: 1.6 !important;
   padding: 1rem 0 !important;
   text-align: start !important;
+  color: var(--custom-header-color) !important;
+
 
 }
 .publicationtit {

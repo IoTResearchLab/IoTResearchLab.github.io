@@ -14,11 +14,11 @@ const FeatureList = [
     description: <></>,
   },
  
-  {
-    title: <a style={{ color: 'var(--custom-header-color)' }} href="/Smart-Roads-and-Traffic-Prediction">Smart Roads and Traffic Prediction</a>,
-    imgSrc: '/img/project7.jpeg', // Use relative path here
-    description: <></>,
-  },
+  // {
+  //   title: <a style={{ color: 'var(--custom-header-color)' }} href="/Smart-Roads-and-Traffic-Prediction">Smart Roads and Traffic Prediction</a>,
+  //   imgSrc: '/img/project7.jpeg', // Use relative path here
+  //   description: <></>,
+  // },
 ];
 
 // Feature Component

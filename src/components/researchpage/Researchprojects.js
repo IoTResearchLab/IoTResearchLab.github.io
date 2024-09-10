@@ -20,7 +20,7 @@ const staticProjects = [
   { title: '[ARC] Building IoT infrastructure', description: '', image: project1, link: '' },
   { title: '[ARC] Dynamic Access Control in IoT Scenarios', description: '', image: project3, link: '' },
   // { title: 'XBeats, A Smart ECG Monitoring Platform', description: '', image: project5, link: '/XBeats-A-Smart-ECG-Monitoring-Platform' },
-  { title: 'Smart Roads and Traffic Prediction', description: '', image: project7, link: '/Smart-Roads-and-Traffic-Prediction' },
+  // { title: 'Smart Roads and Traffic Prediction', description: '', image: project7, link: '/Smart-Roads-and-Traffic-Prediction' },
   // { title: 'Responding to Agitation/Aggression in Dementia', description: '', image: project9, link: '/Responding-to-Agitation-Agression-in-Dementia' },
 ];
 

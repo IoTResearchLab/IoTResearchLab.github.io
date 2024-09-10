@@ -100,7 +100,6 @@ const config = {
       },
       items: [
         { to: '/traffic', label: 'IoT in Smart Mobility', position: 'left' },
-        { type: 'search', position: 'right' },
         { to: '/join-us', label: 'Contact Us', position: 'right' },
         { to: '/health', label: 'IoT in Health Care', position: 'left' },
         { to: '/infra', label: 'IoT Infrastructure', position: 'left' },
@@ -159,13 +158,7 @@ const config = {
     },
   },
   plugins: [
-    [
-      '@cmfcmf/docusaurus-search-local',
-      {
-        indexPages: true,
-        language: "en",
-      },
-    ],
+   
     pagesGenPlugin,
   ],
   customFields: {
