@@ -20,8 +20,8 @@ const FeatureList = [
     imgSrc: '/img/health.webp',
     description: (
       <>
-        Healthcare is shifting towards preventive care, but heart care management is overlooked by both wellness and MedTech companies. With widespread digital connectivity, there's a significant opportunity for connected health devices and remote patient monitoring to fill this gap. This can enhance heart care management and integrate it into the broader preventive care landscape.
-      </>
+      Building a complete loT platform that can be widely deployed and used by the healthcare providers and patients starting by the hardware design by building innovative ECG sensors providing maximum efficiency and patients experience. While integrating latest IT communication technologies for the conveying the patient's ECG to the healthcare providers to take actions in real time and save patients lives. Further more, take advantage of the latest machine learning techniques for analyzing the data and making future predictions on the patient's health condition.
+</>
     ),
   },
   {
@@ -29,7 +29,7 @@ const FeatureList = [
     imgSrc: '/img/infra.webp',
     description: (
       <>
-        Involves creating foundational networks and frameworks to support interconnected IoT devices and applications, ensuring reliable connectivity and efficient data management across various domains like smart cities, healthcare, and agriculture.
+        Involves creating foundational networks and frameworks to support interconnected IoT devices and applications, ensuring reliable connectivity and efficient data management across various domains like smart cities and agriculture.
       </>
     ),
   },
