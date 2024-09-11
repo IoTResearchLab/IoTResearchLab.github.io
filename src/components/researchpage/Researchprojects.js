@@ -4,12 +4,12 @@ import logo from '../../../static/img/our-projects-logo.png';
 
 import project1 from '../../../static/img/project1.png';
 import project3 from '../../../static/img/project3.jpeg';
-import project5 from '../../../static/img/project5.gif';
-import project7 from '../../../static/img/project7.jpeg';
+// import project5 from '../../../static/img/project5.gif';
+// import project7 from '../../../static/img/project7.jpeg';
 import project8 from '../../../static/img/project8.jpeg';
-import project9 from '../../../static/img/project9.jpeg';
-import project10 from '../../../static/img/project10.gif';
-import project11 from '../../../static/img/project11.gif';
+// import project9 from '../../../static/img/project9.jpeg';
+// import project10 from '../../../static/img/project10.gif';
+// import project11 from '../../../static/img/project11.gif';
 import { RingLoader } from 'react-spinners'; // Import the spinner
 
 // Static project list
@@ -54,7 +54,7 @@ const ResearchProjects = () => {
   }, []);
 
   // Combine static and dynamic projects
-  const allProjects = [...staticProjects, ...dynamicProjects];
+  const allProjects = [ ...dynamicProjects, ...staticProjects];
 
   return (
     <div className="research-projects">
