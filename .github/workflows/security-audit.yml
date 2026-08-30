@@ -1,0 +1,33 @@
+name: Security audit
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+jobs:
+  npm-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit
+        run: |
+          npm audit --audit-level=high --json > audit.json || true
+          node -e "const fs = require('fs'); const report = JSON.parse(fs.readFileSync('audit.json', 'utf8')); const entries = Object.entries(report.vulnerabilities || {}).map(([name, value]) => ({ name, value, advisories: (value.via || []).filter((item) => typeof item === 'object') })).filter(({ value, advisories }) => ['high', 'critical'].includes(value.severity) && advisories.length > 0); const actionable = entries.filter(({ value }) => value.fixAvailable && value.fixAvailable !== false); if (actionable.length > 0) { console.error('Actionable high/critical vulnerabilities found:'); for (const { name, value } of actionable) { console.error('- ' + name + ' (' + value.severity + ')'); } process.exit(1); } if (entries.length > 0) { console.log('High/critical vulnerabilities detected, but no automated fix is currently available.'); }"
